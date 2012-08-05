@@ -22,7 +22,7 @@ else
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('America/Montreal');
 
 /**
  * Set the default locale.
@@ -30,7 +30,7 @@ date_default_timezone_set('America/Chicago');
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/setlocale
  */
-setlocale(LC_ALL, 'en_US.utf-8');
+setlocale(LC_ALL, 'fr_CA.utf-8');
 
 /**
  * Enable the Kohana auto-loader.
@@ -53,14 +53,33 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 /**
  * Set the default language
  */
-I18n::lang('en-us');
+I18n::lang('fr-ca');
+
+$_DEVEL = array(
+    'fedora' => array(
+        'base_url' => 'agebdeb.org',
+        'index_file' => '',
+        'errors' => true,
+        'profile' => true,
+        'caching' => false,
+        'database' => Kohana::DEVELOPMENT,
+    ),
+    'agebdeb.org' => array(
+        'base_url' => '/',
+        'index_file' => '',
+        'errors' => false,
+        'profile' => false,
+        'caching' => true,
+        'database' => Kohana::PRODUCTION,
+    )
+);
 
 /**
  * Set Kohana::$environment if a 'KOHANA_ENV' environment variable has been supplied.
  *
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
- */
+ */ 
 if (isset($_SERVER['KOHANA_ENV']))
 {
 	Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
@@ -81,6 +100,10 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
+    'index_file' => '',
+    'errors' => true;
+    'profile' => true;
+    'caching' => false;
 ));
 
 /**
@@ -104,7 +127,7 @@ Kohana::modules(array(
 	// 'image'      => MODPATH.'image',      // Image manipulation
 	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	));
 
 /**
