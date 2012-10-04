@@ -55,35 +55,27 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  */
 I18n::lang('fr-ca');
 
-$_DEVEL = array(
-    'fedora' => array(
-        'base_url' => 'agebdeb.org',
-        'index_file' => '',
-        'errors' => true,
-        'profile' => true,
-        'caching' => false,
-        'database' => Kohana::DEVELOPMENT,
-    ),
-    'agebdeb.org' => array(
-        'base_url' => '/',
-        'index_file' => '',
-        'errors' => false,
-        'profile' => false,
-        'caching' => true,
-        'database' => Kohana::PRODUCTION,
-    )
-);
+$hosts = require_once 'config/hosts.php';
 
-/**
+/*
  * Set Kohana::$environment if a 'KOHANA_ENV' environment variable has been supplied.
  *
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
  */ 
+
 if (isset($_SERVER['KOHANA_ENV']))
 {
-	Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
+		Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
 }
+
+Kohana::$environment = isset (
+	$hosts[$_SERVER['SERVER_NAME']]['environnement']) ?
+	$hosts[$_SERVER['SERVER_NAME']]['environnement'] :
+	Kohana::PRODUCTION;
+
+
+Database::$default = $hosts[$_SERVER['SERVER_NAME']]['database'];
 
 /**
  * Initialize Kohana, setting the default options.
@@ -98,7 +90,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  profile     enable or disable internal profiling               TRUE
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
-Kohana::init(array(
+Kohana::init($hosts[$_SERVER['SERVER_NAME']] + array(
 	'base_url'   => '/',
     'index_file' => '',
     'errors' => true,
