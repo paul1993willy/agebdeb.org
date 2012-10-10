@@ -1,4 +1,4 @@
-<?php echo Kohana::FILE_SECURITY ?>
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Association Générale Étudiante de Bois-de-Boulogne</title>
 <meta name="description" content="" />
