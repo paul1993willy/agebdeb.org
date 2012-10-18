@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Age extends Controller_Template {
+class Controller_Template_Age extends Controller_Template {
 
 	protected $title;
 	public $template = 'layout/age';
