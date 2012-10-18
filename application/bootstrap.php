@@ -75,7 +75,7 @@ Kohana::$environment = isset (
 	Kohana::PRODUCTION;
 
 
-Database::$default = $hosts[$_SERVER['SERVER_NAME']]['database'];
+//Database::$default = $hosts[$_SERVER['SERVER_NAME']]['database'];
 
 /**
  * Initialize Kohana, setting the default options.
@@ -128,6 +128,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'welcome',
+		'controller' => 'age',
 		'action'     => 'index',
 	));
