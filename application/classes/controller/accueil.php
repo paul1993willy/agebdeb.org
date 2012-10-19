@@ -1,7 +1,8 @@
-<?php
+<?php defined('SYSPATH') or die('No direct script access.');
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
+class Controller_Accueil extends Controller_Template_Age {
+	public function action_index()
+	{
+		$this->title = 'Accueil';
+	}
+} ?>

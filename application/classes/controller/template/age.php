@@ -18,7 +18,7 @@ class Controller_Template_Age extends Controller_Template {
 		View::bind_global('keywords', $this->keywords);
 
 		$this->title = isset($this->title) ?
-			'AGEBdeB - '. $this->title :
+			'AGEBdeB - ' . $this->title :
 			'AGEBdeB';
 
 		$this->description = isset($this->description) ?
@@ -30,11 +30,13 @@ class Controller_Template_Age extends Controller_Template {
 
 	public function action_index()
 	{
-		$this->response->body('hello, world!');
+		$accueil = View::factory('accueil', NULL);
+		$this->response->body($accueil);
 	}
 	
 	public function after ()
 	{
+
 	}
 } // End Welcome
 ?>

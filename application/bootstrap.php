@@ -128,6 +128,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'age',
+		'controller' => 'template_age',
 		'action'     => 'index',
 	));
