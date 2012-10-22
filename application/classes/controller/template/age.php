@@ -18,15 +18,6 @@ class Controller_Template_Age extends Controller_Template {
 		View::bind_global('description', $this->description);
 		View::bind_global('keywords', $this->keywords);
 
-		$this->title = isset($this->title) ?
-			'AGEBdeB - ' . $this->title : 'AGEBdeB';
-
-		$this->description = isset($this->description) ?
-			$this->description : 'Le site de l\'association générale étudiante
-				de bois de boulogne';
-
-		$this->keywords = isset($this->keywords) ?
-			$this->keywords : '';
 		$this->head = View::factory('layout/head');
 		$this->header = View::factory('layout/header');
 	}
@@ -37,7 +28,20 @@ class Controller_Template_Age extends Controller_Template {
 	
 	public function after ()
 	{
-		$this->body = $this->head . $this->header . $this->body;
+		$this->title = isset($this->title) ?
+			$this->title . ' - Association générale étudiante de Bois-de-Boulogne':
+			'Association générale étudiante de Bois-de-Boulogne';
+
+		$this->description = isset($this->description) ?
+			$this->description : 'Le site de l\'association générale étudiante
+				de bois de boulogne';
+
+		$this->keywords = isset($this->keywords) ?
+			$this->keywords : '';
+		$this->footer = View::factory('layout/footer');
+		$this->foot = View::factory('layout/foot');
+		$this->body = $this->head . $this->header . $this->body . $this->footer .
+			$this->foot;
 		$this->response->body($this->body);
 	}
 } // End Welcome
