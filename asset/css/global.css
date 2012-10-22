@@ -1,0 +1,56 @@
+/* CSS de base */
+body {
+    font-family:'Arial','Arial-ItalicMT','sans-serif';
+}
+
+/* Heading */
+h1 {
+    font-size:60px;
+    color:#fff;
+    font-weight:400;
+}
+
+h2 {
+    font-size:37px;
+    color:#fff;
+    font-weight:400;
+}
+
+h3 {
+    margin:10px auto;
+    color:#fff;
+    font-weight:400;
+}
+
+h4 {
+    margin:10px auto;
+    font-size:15px;
+    color:#fff;
+}
+
+a {
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    text-decoration:none;
+}
+
+a:hover, .selected {
+    text-decoration: none;
+    text-shadow:gray .1em .1em .2em;
+    /* color: #a8ff5c; */
+}
+
+
+input[type=checkbox] {
+    margin: 5px auto;
+}
+
+
+li.error {
+    margin: 0;
+}
+
+
+
+
+
