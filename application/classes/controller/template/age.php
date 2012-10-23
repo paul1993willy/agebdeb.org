@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Template_Age extends Controller_Template {
+abstract class Controller_Template_Age extends Controller_Template {
 
 	protected $title;
 	public $template = 'layout/age';
@@ -22,10 +22,6 @@ class Controller_Template_Age extends Controller_Template {
 		$this->header = View::factory('layout/header');
 	}
 
-	public function action_index()
-	{
-	}
-	
 	public function after ()
 	{
 		$this->title = isset($this->title) ?
@@ -44,5 +40,5 @@ class Controller_Template_Age extends Controller_Template {
 			$this->foot;
 		$this->response->body($this->body);
 	}
-} // End Welcome
+}
 ?>
