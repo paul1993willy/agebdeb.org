@@ -3,3 +3,5 @@
 .htaccess
 /nbproject/private/
 /nbproject
+application/cache/*
+application/logs/*
