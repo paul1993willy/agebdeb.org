@@ -1,0 +1,31 @@
+body {
+	width: 960px;
+	margin: auto;
+}
+
+nav li {
+	float: left;
+	font-weight: bold;
+}
+
+nav > ul {
+	width: 100%;
+}
+
+li ul {
+	height: 0px;
+	overflow: hidden;
+	transition: height 0.5s;
+	-webkit-transition: height 0.5s;
+	-moz-transition: height 0.5s;
+	-o-transition: height 0.5s;
+}
+
+li:hover ul {
+	height: 4em;
+}
+
+li ul li {
+	float: none;
+	font-weight: normal;
+}
