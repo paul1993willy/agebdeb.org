@@ -34,10 +34,11 @@ abstract class Controller_Template_Age extends Controller_Template {
 
 		$this->keywords = isset($this->keywords) ?
 			$this->keywords : '';
+		$this->sidebar = View::factory('layout/sidebar');
 		$this->footer = View::factory('layout/footer');
 		$this->foot = View::factory('layout/foot');
-		$this->body = $this->head . $this->header . $this->body . $this->footer .
-			$this->foot;
+		$this->body = $this->head . $this->header . $this->sidebar . $this->body
+			. $this->footer . $this->foot;
 		$this->response->body($this->body);
 	}
 }
