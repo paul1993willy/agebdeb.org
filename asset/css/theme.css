@@ -3,29 +3,43 @@ body {
 	margin: auto;
 }
 
-nav li {
-	float: left;
-	font-weight: bold;
+nav {
+	width: 20%;
+	min-height:450px;
+	border:1px solid #ccc;
 }
 
 nav > ul {
-	width: 100%;
+	margin: 1em;
 }
 
-li ul {
+li.parent {
+	font-weight: bold;
+	list-style-type: disc;
+	list-style-position:inside;
+}
+
+li.parent:hover {
+	list-style-type: circle;
+}
+
+li.parent ul {
+	font-weight: normal;
 	height: 0px;
 	overflow: hidden;
-	transition: height 0.5s;
-	-webkit-transition: height 0.5s;
-	-moz-transition: height 0.5s;
-	-o-transition: height 0.5s;
+	transition: height 0.25s;
 }
 
-li:hover ul {
-	height: 4em;
+li.parent:hover ul {
+	height:4em;
+	background-color: rgba(0,0,0,0.0075);
 }
 
-li ul li {
-	float: none;
-	font-weight: normal;
+.pull-left {
+	float: left;
+}
+
+#content-container {
+	border: 1px solid #ccc;
+	min-height: 450px;
 }

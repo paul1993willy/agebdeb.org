@@ -5,29 +5,30 @@ body {
 
 /* Heading */
 h1 {
+    color:#000;
     font-size:60px;
-    color:#fff;
-    font-weight:400;
+    font-weight:700;
 }
 
 h2 {
     font-size:37px;
-    color:#fff;
+    color:#000;
     font-weight:400;
 }
 
 h3 {
     margin:10px auto;
-    color:#fff;
+    color:#000;
     font-weight:400;
 }
 
 h4 {
     margin:10px auto;
     font-size:15px;
-    color:#fff;
+    color:#000;
 }
 
+/* Liens */
 a {
     -moz-transition:.5s;
     -webkit-transition:.5s;
@@ -49,8 +50,3 @@ input[type=checkbox] {
 li.error {
     margin: 0;
 }
-
-
-
-
-
