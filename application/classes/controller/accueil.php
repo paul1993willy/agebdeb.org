@@ -8,6 +8,7 @@ class Controller_Accueil extends Controller_Template_Age {
 	public function action_index()
 	{
 		$this->title = 'Accueil';
+		$this->body = View::factory('accueil');
 	}
 
 } ?>
