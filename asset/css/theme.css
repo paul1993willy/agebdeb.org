@@ -1,8 +1,17 @@
 body {
-	width: 960px;
-	margin: auto;
+	background: #dadcca url('../image/agebdeb.org/background.gif');
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: repeat-x;
 }
 
+div#wrap {
+	width: 960px;
+	margin: auto;
+	background-color: white;
+}
+
+/* Par defaut, s'applique a tous les articles */
 article {
 	border-top: 1px dotted #ccc;
 	border-bottom: 1px dotted #ccc;
@@ -11,39 +20,42 @@ article {
 	width: 70%;
 }
 
+/*
+ * Navigation
+ */
 nav {
 	width: 20%;
 	min-height:450px;
-	outline:1px solid #ccc;
 }
 
 nav > ul {
-	margin: 1em;
+	text-align: right;
+	margin-left: 10px;
+	border-right: 5px solid rgb(147, 152, 99);
+	background-color: gainsboro;
+}
+
+nav a {
+	display: block;
+	padding: 0.45em;
 }
 
 li.parent {
-	font-weight: bold;
-	list-style-type: disc;
-	list-style-position:inside;
-}
-
-li.parent:hover {
-	list-style-type: circle;
+	font-size: 16px;
 }
 
 li.parent ul {
-	font-weight: normal;
-	height: 0px;
+	/*height: 0px;*/
 	overflow: hidden;
-	transition: height 0.25s;
-	-webkit-transition: height 0.25s;
-	-moz-transition: height 0.25s;
-	-o-transition: height 0.25s;
+	background-color: lightgray;
+}
+
+li.parent li {
+	font-size: 13px;
 }
 
 li.parent:hover ul {
-	height:4em;
-	background-color: rgba(0,0,0,0.0075);
+	height: auto;
 }
 
 .pull-left {
@@ -51,7 +63,6 @@ li.parent:hover ul {
 }
 
 #content-container {
-	outline: 1px solid #ccc;
 	min-height: 450px;
 	width: 80%;
 	float: right;
