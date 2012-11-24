@@ -14,7 +14,7 @@
 			Veuillez faire un tour au local de votre association ! S-159
 		</p>
 	</section>
-	<section class="span4 minimized pull-left">
+	<section class="span4 minimized pull-left first-pull">
 		<h1>Actualité</h1>
 		<?php for($i = 0; $i < 3; $i++) : ?>
 		<article>
@@ -24,7 +24,7 @@
 		</article>
 		<?php endfor; ?>
 	</section>
-	<section class="minimized span2 pull-left">
+	<section class="minimized span2 pull-left last-pull">
 		<h1>Calendrier</h1>
 		<table>
 			<thead>
