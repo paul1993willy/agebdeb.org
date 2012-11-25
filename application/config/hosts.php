@@ -6,8 +6,8 @@
  */
 return array (
 
-'fedora' => array (
-	'base_url' => '/agebdeb.org/',
+'fedora.agebdeb.org' => array (
+	'base_url' => '/',
     'index_file' => '',
     'errors' => true,
     'profile' => true,
