@@ -6,31 +6,50 @@
  */
 return array (
 
-'fedora.agebdeb.org' => array (
-	'base_url' => '/',
-    'index_file' => '',
-    'errors' => true,
-    'profile' => true,
-    'caching' => false,
-    'environnement' => Kohana::DEVELOPMENT,
-	'database' => 'localhost',
-),
-'localhost' => array (
-	'base_url' => '/agebdeb.org/',
-    'index_file' => '',
-    'errors' => true,
-    'profile' => true,
-    'caching' => false,
-    'environnement' => Kohana::DEVELOPMENT,
-	'database' => 'localhost',
-),
-'agebdeb.org' => array (
-	'base_url' => '/',
-    'index_file' => '',
-    'errors' => false,
-    'profile' => false,
-    'caching' => true,
-    'environnement' => Kohana::PRODUCTION,
-	'database' => '',
-));
+	'fedora.agebdeb.org' => array (
+		'base_url' => '/',
+		'index_file' => '',
+		'errors' => true,
+		'profile' => true,
+		'caching' => false,
+		'environnement' => Kohana::DEVELOPMENT,
+		'database' => 'localhost',
+	),
+	'localhost' => array (
+		'base_url' => '/agebdeb.org/',
+		'index_file' => '',
+		'errors' => true,
+		'profile' => true,
+		'caching' => false,
+		'environnement' => Kohana::DEVELOPMENT,
+		'database' => 'localhost',
+	),
+	'agebdeb.org' => array (
+		'base_url' => '/',
+		'index_file' => '',
+		'errors' => false,
+		'profile' => false,
+		'caching' => true,
+		'environnement' => Kohana::PRODUCTION,
+		'database' => '',
+	),
+	'assovox.comeze.com' => array (
+		'base_url' => '/',
+		'index_file' => '',
+		'errors' => false,
+		'profile' => false,
+		'caching' => true,
+		'environnement' => Kohana::PRODUCTION,
+		'database' => '',
+	),
+	'dev.assovox.comeze.com' => array (
+		'base_url' => '/',
+		'index_file' => '',
+		'errors' => false,
+		'profile' => false,
+		'caching' => true,
+		'environnement' => Kohana::PRODUCTION,
+		'database' => '',
+	)
+);
 ?>
