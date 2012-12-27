@@ -1,6 +1,11 @@
 /*
- * Elements de type bloc
+ * ELEMENTS
  */
+
+article {
+	border-bottom: 1px dashed #ccc;
+	padding: 10px 0;
+}
 
 body {
 	background: #dadcca url('../image/agebdeb.org/background.gif');
@@ -8,29 +13,6 @@ body {
 	background-attachment: fixed;
 	background-repeat: repeat-x;
 	font-size: 13px;
-}
-
-/* S'applique aux sections du site */
-section {
-	border-bottom: 1px dotted #ccc;
-}
-
-/* Par defaut, s'applique a tous les articles */
-article {
-	border-bottom: 1px dashed #ccc;
-	padding: 10px 0;
-}
-
-/* Navigation */
-nav {
-	width: 20%;
-	min-height:450px;
-}
-
-p {
-	font-size: 13px;
-	margin: 0 0 10px;
-	text-align: justify;
 }
 
 h1 {
@@ -47,9 +29,27 @@ h3 {
 	font-size: 16px;
 }
 
-/*
- * Elements de type inline
- */
+header {
+	padding: 15px 20px;
+	box-sizing: border-box;
+	font-family: Cabin;
+}
+
+nav {
+	width: 20%;
+	min-height:450px;
+	clear: left;
+}
+
+p {
+	font-size: 13px;
+	margin: 0 0 10px;
+	text-align: justify;
+}
+
+section {
+	border-bottom: 1px dotted #ccc;
+}
 
 th {
 	width: 0.142857143%;
@@ -61,14 +61,17 @@ time {
 	margin-right: 10px;
 }
 
-/*
- * Regles de selection
- */
+/* IDs */
 
-div#wrap {
-	width: 960px;
-	margin: auto;
-	background-color: white;
+#content-container {
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 80%;
+	float: right;
+	padding: 20px;
+	padding-top: 0px;
 }
 
 section.pull-left {
@@ -83,7 +86,7 @@ section:first-child {
 	margin-top: 0px;
 }
 
-
+/* REGLES ELEMENTS */
 
 article:last-child {
 	border-bottom: 0px;
@@ -95,24 +98,18 @@ article p {
 	white-space: nowrap;
 }
 
-.minimized article p:last-child {
-	margin-bottom: 0px;
-}
-
-nav > ul {
-	text-align: right;
-	margin-left: 10px;
-	border-right: 5px solid rgb(147, 152, 99);
-	background-color: gainsboro;
-}
-
-nav a {
-	display: block;
-	padding: 0.45em;
+div#wrap {
+	width: 960px;
+	margin: auto;
+	background-color: white;
 }
 
 li.parent {
 	font-size: 16px;
+}
+
+li.parent li {
+	font-size: 13px;
 }
 
 li.parent ul {
@@ -121,42 +118,41 @@ li.parent ul {
 	background-color: lightgray;
 }
 
-li.parent li {
-	font-size: 13px;
-}
-
 li.parent:hover ul {
 	height: auto;
 }
 
-.pull-left {
-	float: left;
+nav a {
+	display: block;
+	padding: 0.45em;
 }
 
-.pull-left.first-pull {
-	padding-left: 0px;
+nav > ul {
+	text-align: right;
+	border-right: 5px solid rgb(147, 152, 99);
+	background-color: gainsboro;
 }
 
-.pull-left:first-of-type {
-	padding-left: 0px;
+section:first-child {
+	margin-top: 0px;
 }
 
-.span2 {
-	width: 40%;
-	padding: 0 20px;
-	box-sizing: border-box;
-}
-.span4 {
-	width: 60%;
-	padding: 0 20px;
-	box-sizing: border-box;
+section.pull-left {
+	border-right: 1px dotted #ccc;
 }
 
-#content-container {
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 80%;
-	float: right;
-	padding: 20px;
-	padding-top: 0px;
+section.pull-left.last-pull {
+	border-right: 0px;
+}
+
+/* REGLES CLASSES */
+
+.minimized article p:last-child {
+	margin-bottom: 0px;
+}
+
+/* REGLES ID */
+
+#logo img {
+	height: 200px;
 }
