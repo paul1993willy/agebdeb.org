@@ -74,16 +74,22 @@ time {
 	padding-top: 0px;
 }
 
-section.pull-left {
+#logo {
 	border-right: 1px dotted #ccc;
+	margin: 0px 20px 0px 0px;
+	padding: 0px 20px 0px 0px;
 }
 
-section.pull-left.last-pull {
-	border-right: 0px;
+#nom_asso {
+	font-size: 24px;
+	font-weight: normal;
+	width: 500px;
 }
 
-section:first-child {
-	margin-top: 0px;
+#sigle {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 15px;
 }
 
 /* REGLES ELEMENTS */
