@@ -33,7 +33,7 @@ return array (
 		'environnement' => Kohana::PRODUCTION,
 		'database' => '',
 	),
-	'assovox.comeze.com' => array (
+	'assovox.comlu.com' => array (
 		'base_url' => '/',
 		'index_file' => '',
 		'errors' => false,
