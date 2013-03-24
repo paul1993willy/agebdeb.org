@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Billets composants le fil d'actualite.
+ */
 class Model_Billet extends ORM {
 	protected $created;
 	protected $modified;

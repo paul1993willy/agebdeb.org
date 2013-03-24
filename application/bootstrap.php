@@ -1,19 +1,17 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php
+
+defined('SYSPATH') or die('No direct script access.');
 
 // -- Environment setup --------------------------------------------------------
-
 // Load the core Kohana class
-require SYSPATH.'classes/kohana/core'.EXT;
+require SYSPATH . 'classes/kohana/core' . EXT;
 
-if (is_file(APPPATH.'classes/kohana'.EXT))
-{
-	// Application extends the core
-	require APPPATH.'classes/kohana'.EXT;
-}
-else
-{
-	// Load empty core extension
-	require SYSPATH.'classes/kohana'.EXT;
+if (is_file(APPPATH . 'classes/kohana' . EXT)) {
+    // Application extends the core
+    require APPPATH . 'classes/kohana' . EXT;
+} else {
+    // Load empty core extension
+    require SYSPATH . 'classes/kohana' . EXT;
 }
 
 /**
@@ -62,17 +60,16 @@ $hosts = require_once 'config/hosts.php';
  *
  * Note: If you supply an invalid environment name, a PHP warning will be thrown
  * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
- */ 
+ */
 
-if (isset($_SERVER['KOHANA_ENV']))
-{
-		Kohana::$environment = constant('Kohana::'.strtoupper($_SERVER['KOHANA_ENV']));
+if (isset($_SERVER['KOHANA_ENV'])) {
+    Kohana::$environment = constant('Kohana::' . strtoupper($_SERVER['KOHANA_ENV']));
 }
 
-Kohana::$environment = isset (
-	$hosts[$_SERVER['SERVER_NAME']]['environnement']) ?
-	$hosts[$_SERVER['SERVER_NAME']]['environnement'] :
-	Kohana::PRODUCTION;
+Kohana::$environment = isset(
+                $hosts[$_SERVER['SERVER_NAME']]['environnement']) ?
+        $hosts[$_SERVER['SERVER_NAME']]['environnement'] :
+        Kohana::PRODUCTION;
 
 
 //Database::$default = $hosts[$_SERVER['SERVER_NAME']]['database'];
@@ -91,7 +88,7 @@ Kohana::$environment = isset (
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init($hosts[$_SERVER['SERVER_NAME']] + array(
-	'base_url'   => '/',
+    'base_url' => '/',
     'index_file' => '',
     'errors' => true,
     'profile' => true,
@@ -101,7 +98,7 @@ Kohana::init($hosts[$_SERVER['SERVER_NAME']] + array(
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
-Kohana::$log->attach(new Log_File(APPPATH.'logs'));
+Kohana::$log->attach(new Log_File(APPPATH . 'logs'));
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
@@ -112,14 +109,30 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	));
+    // 'auth'       => MODPATH.'auth',       // Basic authentication
+    // 'cache'      => MODPATH.'cache',      // Caching with multiple backends
+    // 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
+    'database' => MODPATH . 'database', // Database access
+    // 'image'      => MODPATH.'image',      // Image manipulation
+    'orm' => MODPATH . 'orm', // Object Relationship Mapping
+    // 'unittest'   => MODPATH.'unittest',   // Unit testing
+    'userguide' => MODPATH . 'userguide', // User guide and API documentation
+    'bootstrap' => MODPATH . 'bootstrap', // User guide and API documentation
+    'notifications' => MODPATH . 'notifications', // User guide and API documentation
+));
 
-	require_once 'config/routes.php';
+
+/**
+ * Set the routes. Each route must have a minimum of a name, a URI and a set of
+ * defaults for the URI.
+ */
+Route::set('default', '(<controller>)', array(
+    'controller' => 'accueil'
+        )
+);
+Route::set('default', '(<controller>(/<action>(/<id>)))')
+        ->defaults(array(
+            'controller' => 'accueil',
+            'action' => 'index',
+        ));
+?>
