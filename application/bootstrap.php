@@ -51,7 +51,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 /**
  * Set the default language
  */
-I18n::lang('fr-ca');
+I18n::lang('fr');
 
 Host::init();
 
@@ -72,18 +72,18 @@ Kohana::modules(array(
     // 'auth'       => MODPATH.'auth',       // Basic authentication
     // 'cache'      => MODPATH.'cache',      // Caching with multiple backends
     // 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-    //'database' => MODPATH . 'database', // Database access
+    // 'database' => MODPATH . 'database', // Database access
     // 'image'      => MODPATH.'image',      // Image manipulation
-    //'orm' => MODPATH . 'orm', // Object Relationship Mapping
+    // 'orm' => MODPATH . 'orm', // Object Relationship Mapping
     // 'unittest'   => MODPATH.'unittest',   // Unit testing
-    'userguide' => MODPATH . 'userguide', // User guide and API documentation
+    // 'userguide' => MODPATH . 'userguide', // User guide and API documentation
     'bootstrap' => MODPATH . 'bootstrap', // User guide and API documentation
     'notifications' => MODPATH . 'notifications', // User guide and API documentation
     'mail' => MODPATH . 'mail'
 ));
 
 
-Route::set('default', '(<controller>)(/<action>)(/<id>)')
+Route::set('default', '(<controller>(/<action>))')
         ->defaults(array(
             'controller' => 'accueil',
             'action' => 'index',

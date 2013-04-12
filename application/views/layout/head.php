@@ -5,7 +5,5 @@
 <meta name="description" content="<?php echo $description ?>" />
 <meta name="keywords" content="<?php echo $keywords ?>" />
 
-<?php echo HTML::style("https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css") ?>
-
-
-	
+<?php echo HTML::style("asset/css/bootstrap.min.css") ?>
+<?php echo HTML::style("asset/css/bootstrap.min.js") ?>
