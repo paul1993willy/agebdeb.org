@@ -48,3 +48,27 @@ li.error {
 .clear {
 	clear: both;
 }
+
+.pull-left {
+	float: left;
+}
+
+.pull-left.first-pull {
+	padding-left: 0px;
+}
+
+.pull-left:first-of-type {
+	padding-left: 0px;
+}
+
+.span2 {
+	width: 40%;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.span4 {
+	width: 60%;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+

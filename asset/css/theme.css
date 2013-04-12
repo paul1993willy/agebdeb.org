@@ -1,6 +1,11 @@
 /*
- * Elements de type bloc
+ * ELEMENTS
  */
+
+article {
+	border-bottom: 1px dashed #ccc;
+	padding: 10px 0;
+}
 
 body {
     background: #dadcca url('../image/agebdeb.org/background.gif');
