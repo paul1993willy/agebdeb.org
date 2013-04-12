@@ -44,6 +44,26 @@
                         </div>
                     </div>
 
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <h2>Affaires Externes</h2>
+                            <p>Le Coordonnateur ou la Coordonnatrice aux Affaires Externes...</p>
+                        </div>
+                        <div class="span6">
+                            <h3>Commission Électorale</h3>
+                            
+                            <p>Les commissaires électoraux sont</p>
+                            
+                            <ul>
+                                <li>Guillaume Poirier-Morency</li>
+                                <li>Élyse Noël-Gauthier</li>
+                                <li>Hugues Pellerin</li>
+                            </ul>
+                            
+                            <p>Ces commissaires s'assurent du bon déroulement du processus électoral. Pour tous commentaires, envoyez un courriel à <?php echo HTML::mailto("elections@age.bdeb.qc.ca") ?>.</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="span3">
                     <h2>Appui aux Luttes Sociales</h2>
