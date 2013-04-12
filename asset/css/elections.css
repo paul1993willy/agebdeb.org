@@ -1,0 +1,13 @@
+
+.hero-unit {
+    background: url('../img/background.png'); 
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.hero-unit > h1, .hero-unit > h2 {
+    color: white;
+
+}
+
+

@@ -5,10 +5,7 @@
     <body>
         <header><?php echo View::factory("layout/header") ?></header>
 
-        <div class="container">         
-
-
-            <?php echo View::factory("notifications/notifications") ?>
+        <div class="container">        
 
             <?php echo $content ?>
 
@@ -16,6 +13,5 @@
 
         <footer><?php echo View::factory("layout/footer") ?></footer>
 
-        <?php echo View::factory("notifications/errors") ?>
     </body>
 </html>

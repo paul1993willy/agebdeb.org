@@ -1,3 +1,6 @@
 [submodule "modules/bootstrap"]
 	path = modules/bootstrap
 	url = https://github.com/Hete/kohana-bootstrap
+[submodule "modules/mail"]
+	path = modules/mail
+	url = git@github.com:Hete/kohana-mail.git

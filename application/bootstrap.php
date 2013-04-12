@@ -53,47 +53,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  */
 I18n::lang('fr-ca');
 
-$hosts = require_once 'config/hosts.php';
-
-/*
- * Set Kohana::$environment if a 'KOHANA_ENV' environment variable has been supplied.
- *
- * Note: If you supply an invalid environment name, a PHP warning will be thrown
- * saying "Couldn't find constant Kohana::<INVALID_ENV_NAME>"
- */
-
-if (isset($_SERVER['KOHANA_ENV'])) {
-    Kohana::$environment = constant('Kohana::' . strtoupper($_SERVER['KOHANA_ENV']));
-}
-
-Kohana::$environment = isset(
-                $hosts[$_SERVER['SERVER_NAME']]['environnement']) ?
-        $hosts[$_SERVER['SERVER_NAME']]['environnement'] :
-        Kohana::PRODUCTION;
-
-
-//Database::$default = $hosts[$_SERVER['SERVER_NAME']]['database'];
-
-/**
- * Initialize Kohana, setting the default options.
- *
- * The following options are available:
- *
- * - string   base_url    path, and optionally domain, of your application   NULL
- * - string   index_file  name of your index file, usually "index.php"       index.php
- * - string   charset     internal character set used for input and output   utf-8
- * - string   cache_dir   set the internal cache directory                   APPPATH/cache
- * - boolean  errors      enable or disable error handling                   TRUE
- * - boolean  profile     enable or disable internal profiling               TRUE
- * - boolean  caching     enable or disable internal caching                 FALSE
- */
-Kohana::init($hosts[$_SERVER['SERVER_NAME']] + array(
-    'base_url' => '/',
-    'index_file' => '',
-    'errors' => true,
-    'profile' => true,
-    'caching' => false,
-));
+Host::init();
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
@@ -112,25 +72,18 @@ Kohana::modules(array(
     // 'auth'       => MODPATH.'auth',       // Basic authentication
     // 'cache'      => MODPATH.'cache',      // Caching with multiple backends
     // 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-    'database' => MODPATH . 'database', // Database access
+    //'database' => MODPATH . 'database', // Database access
     // 'image'      => MODPATH.'image',      // Image manipulation
-    'orm' => MODPATH . 'orm', // Object Relationship Mapping
+    //'orm' => MODPATH . 'orm', // Object Relationship Mapping
     // 'unittest'   => MODPATH.'unittest',   // Unit testing
     'userguide' => MODPATH . 'userguide', // User guide and API documentation
     'bootstrap' => MODPATH . 'bootstrap', // User guide and API documentation
     'notifications' => MODPATH . 'notifications', // User guide and API documentation
+    'mail' => MODPATH . 'mail'
 ));
 
 
-/**
- * Set the routes. Each route must have a minimum of a name, a URI and a set of
- * defaults for the URI.
- */
-Route::set('default', '(<controller>)', array(
-    'controller' => 'accueil'
-        )
-);
-Route::set('default', '(<controller>(/<action>(/<id>)))')
+Route::set('default', '(<controller>)(/<action>)(/<id>)')
         ->defaults(array(
             'controller' => 'accueil',
             'action' => 'index',

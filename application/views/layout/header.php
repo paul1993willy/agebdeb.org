@@ -5,8 +5,7 @@
 
             <ul class="nav">
 
-                <li><?php echo HTML::anchor("", "Accueil") ?></li>
-
+                <li><?php echo HTML::anchor("elections", "Élections du Conseil Exécutif 2013-2014") ?></li>
             </ul>
         </div>
 
@@ -15,13 +14,11 @@
 
 <div class="hero-unit" style="background: url('<?php echo URL::site("asset/image/agebdeb.org/background.gif") ?>');">
 
-
-
     <div class="container">
 
         <h1>AGEBdeB</h1>
 
-        <p>Site web de l'association étudiante du collège de Bois-de-Boulogne</p>
+        <p>Association Étudiante du Collège de Bois-de-Boulogne</p>
 
     </div>
 
