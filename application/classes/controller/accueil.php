@@ -2,7 +2,7 @@
 
 defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Accueil extends Controller_Template_Age {
+class Controller_Accueil extends Controller_Template_AgeBdeB {
 
     public function before() {
         parent::before();
