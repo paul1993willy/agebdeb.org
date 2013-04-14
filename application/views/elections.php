@@ -1,4 +1,6 @@
-<p>Le <strong>Conseil Exécutif</strong> est un groupe formé d'étudiants répondent à divers besoins au sein de l'Association Étudiante. Leurs champs d'actions sont déterminés par les mandat que <strong>vous</strong>, les étudiants leur conférez par le biais des Assemblées Générales.</p>
+<p>L’<strong>Association Générale Étudiante</strong> (AGE) est une organisation démocratique et est administrée par un Conseil Exécutif (CE) composé de membres élus par l’Assemblée Générale de tous les membres. Ces élus assurent ensemble la responsabilité de la gestion quotidienne de l’Association et le suivi des orientations ou des tâches votées par l’Assemblée Générale. Ces personnes sont redevables à l’Assemblée et doivent y présenter un rapport de leurs activités en plus d’assurer la préparation de la plupart des points à l’ordre du jour.</p>
+
+<p>Le <strong>Conseil Exécutif</strong> est composé de 9 postes, et chaque élu ne peut s’adjoindre d’une personne pour l’aider à ses tâches. Il est possible pour les membres de demander d’assister aux réunions du Conseil.</p>
 
 <p>Pour en faire partie, vous devez déposer votre candidature.</p>
 

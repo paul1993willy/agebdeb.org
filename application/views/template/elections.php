@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <title>Élections du Conseil Exécutif 2013-2014</title>
         <?php echo HTML::style("asset/css/bootstrap.min.css") ?>
         <?php echo HTML::style("asset/css/elections.css") ?>
-
     </head>
 
     <body>
@@ -20,72 +18,88 @@
 
             <div class="row-fluid">
                 <div class="span3">
+
                     <h2>Secrétariat et Archives</h2>
+                    <p>Cette personne est responsable des convocations des <strong>Assemblées Générales</strong> et du Conseil Exécutif; et prépare les documents nécéssaire à la tenue de leurs séances. Elle assure également le suivi des décisions prises lors des réunions et voit à la coordinnation des différentes instances délibérantes de l'Association. Elle doit également s'assurer des archives, de la tenue des procès verbaux et des enregistrements légaux de l'Association.</p>
 
-                    <p>Le coordonnateur ou la coordonnatrice au Secrétariat et aux Archives se charge de convoquer les Assemblées Générale et d’en préparer le déroulement. La personne occupant ce poste collabore avec le coordonnateur ou la coordonnatrice Général-e  pour faire le suivi des décisions. De plus, il est responsable de l’aspect légal de l’Association et de ses archives.</p>
+                    
+                    <h2>Affaires Externes</h2>
+                    <p>Cette personne entretient des relations avec les autres associations étudiantes et regroupements étudiants du Québec. Elle est déléguée lors des congrès et des rencontres de celles-ci ainsi que lors des réunions des organismes dont l’Association fait partie. Elle défend les positions de l’Association et les intérêts de ses membres en fonction des mandats issus de l’Assemblée Générale. En somme, elle assure le lien entre les membres de l’Association et les autres organisations étudiantes du Québec ou d’ailleurs.</p>                 
+               
+                   
+                    <h2>Commission Électorale</h2>
 
-                    <h2>Communications</h2>
+                    <p>Les commissaires électoraux sont</p>
 
-                    <p>Le Coordonnateur ou la Coordonnatrice aux Communications s’occupe de promouvoir les services, positions et activités de l’Association Étudiante. La personne occupant ce poste entretient des liens professionnels avec divers médias, participe à la conception et et à la réalisation des diverses campagnes publicitaires au sein de l’Association et prend en charge la gestion du site Internet et les divers comptes sur les réseaux sociaux appartenant à l’Association Étudiante.</p>
+                    <ul>
+                        <li>Guillaume Poirier-Morency</li>
+                        <li>Élyse Noël-Gauthier</li>
+                        <li>Hugues Pellerin</li>
+                    </ul>
 
-                    <h2>Affaires Internes</h2>
-                    <p>Le coordonnateur ou la coordonnatrice aux Affaires Internes gère les comités de l’Association et s’occupe des relations entre ceux-ci.</p>
-                    <h2>Affaires Pédagogiques</h2>
-                    <p>Le coordonnateur ou la coordonnatrice aux Affaires Pédagogiques est en charge des étudiants membres de la Commission des études. La personne occupant le poste informe et conseille l’Association en matière de pédagogie, s’occupe des griefs étudiants et siège sur les organismes pédagogique dont l’Association fait partie.</p>
-
+                    <p>Ces commissaires s'assurent du bon déroulement du processus électoral. Pour tous commentaires, envoyez un courriel à <?php echo HTML::mailto("elections@age.bdeb.qc.ca") ?>.</p>
+                
 
                 </div>
                 <div class="span6">
+                    
                     <div class="hero-unit">
                         <h1 class="text-center">Élections du Conseil Exécutif 2013-2014</h1>
                         <h2>La période de candidature est ouverte pour tous les postes du Conseil Exécutif.</h2>
-
-                        <div class="well">
-
-                            <?php echo $content ?>
-
-                        </div>
                     </div>
 
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <h2>Affaires Externes</h2>
-                            <p>Le Coordonnateur ou la Coordonnatrice aux Affaires Externes...</p>
-                        </div>
-                        <div class="span6">
-                            <h3>Commission Électorale</h3>
+                    <div class="well">
 
-                            <p>Les commissaires électoraux sont</p>
+                        <?php echo $content ?>
 
-                            <ul>
-                                <li>Guillaume Poirier-Morency</li>
-                                <li>Élyse Noël-Gauthier</li>
-                                <li>Hugues Pellerin</li>
-                            </ul>
-
-                            <p>Ces commissaires s'assurent du bon déroulement du processus électoral. Pour tous commentaires, envoyez un courriel à <?php echo HTML::mailto("elections@age.bdeb.qc.ca") ?>.</p>
-                        </div>
                     </div>
+
 
                 </div>
                 <div class="span3">
-                    <h2>Appui aux Luttes Sociales</h2>
-
-                    <p>Le coordonnateur ou la coordonnatrice à l’Appui aux Luttes Sociales s’occupe des dossiers d’ordre politique et conseille l’Association dans ses prises de position politique. La personne occupant le poste organise aussi des activités respectant et promouvant les prises de position de l’Association, s’assure de la communication avec les syndicats du collège et la communauté locale et contacte des organisations sociales et politiques pour informer l’Association sur l’actualité dans ce milieu.</p>
 
                     <h2>Vie Étudiante</h2>
+                    <p>Cette personne voit l’organisation d’événements sportifs, sociaux, culturels ou autres. Elle coordonne son travail de concert avec les autres personnes ou groupes travaillant à la vie étudiante du Collège. Son travail repose sur son initiative ainsi que les demandes de projets spéciaux, tant internes qu’externes.</p>        
 
-                    <p>Le Coordonnateur ou la Coordonnatrice à la vie étudiante se charge de l’organisation d’évènements sportifs, sociaux, culturels et autres, selon les demandes des étudiants et étudiantes. La personne occupant ce poste reçoit et examine les demandes de projets spéciaux, internes ou externes.</p>
+
+                    <h2>Affaires Internes</h2>
+                    <p>Cette personne s'occupe des relations avec les comités et voir à leur coopération mutuelle. Elle voit aussi à la communication entre ses comités et le Conseil Exécutif. Elle doit, de plus, s'assurer de la saine gestion des comités. Finalement, elle s'occupem de la convocation et de la préparation de la Table des Comités (TC).</p>
+
                     <h2>Affaires Administratives</h2>
-                    <p>Le coordonnateur ou la coordonnatrice aux Affaires Administratives est responsable des fonds et des états financiers de l’Association Étudiante. La personne occupant le poste doit planifier les budgets et les rapports financiers annuels, veiller au financement de l’Association et autoriser les dépenses de l’Association Étudiante lorsque ces dernières sont justifiées.</p>
-                    <h2>Coordonnateur Général</h2>
-                    <p>Le coordonnateur ou la coordonnatrice Général-e est le porte-parole officiel de l’Association Étudiante. L’étudiant ou étudiante occupant ce poste s’occupe de préparer des plans d’actions, d’assister les autres exécutants et exécutantes dans leurs dossiers, d’assurer le suivi des décisions prises par le conseil exécutif et d’autoriser les dépenses de l’Association Étudiante et ses comités.</p>
+                    <p>Cette personne est responsable de la gestion financière et de la tenue de livres comptables de l’Association. Elle prépare et gère les budgets et vois à la préparation des bilans liés au budget. Elle est chargée de faire certifier les états financiers par un vérificateur une fois par année. Elle assure le suivi mensuel des budgets des comités. Cette personne est de plus signataire et autorise les dépenses effectuées par l’Association et ses comités. En somme, elle s’assure que le Conseil Exécutif et les membres peuvent avoir l’heure juste sur les finances de l’Association et voit à une bonne gestion courante des finances de l’Association.</p> 
+
+
                 </div>
             </div>
 
+            <div class="row-fluid">
+                <div class="span3">
+                    <h2>Affaires Pédagogiques</h2>
+                    <p>Cette personne a la charge de la préparation de la <strong>Table des Représentants de Programme</strong> (TP) et coordonne les représentants élus à la Commission des Études, où elle doit d'ailleurs absolument siéger. Elle s'assure que l'Association informe et conseille ses membres en matière de pédagogie. Elle s'occupe également de tout ce qui a trait aux plaintes étudiantes. Elle peut finalement représenter l'Association sur des enjeux pédagogiques à l'extérieur du cégep.</p>
 
+                </div>
+                <div class="span3">
+                    
+                    
+                    <h2>Communications</h2>
+                    <p>Cette personne voit à informer les membres des services, positions et activités offertes par l'Association. Elle recueuille pour le Conseil Exécutif les commentaires des membres sur les buts, activités et services de l'Association. Elle assure également le suivi des correspondances destinées à l'Association. Elle offre un soutien à la conception et à la réalisation des campagnes d'information des activités organisées par l'Association, ses comités et ses organismes affiliés. Elle est également la personne responsable des communications de l'Association par Internet.</p>
+
+                </div>
+
+                <div class="span3">
+                    <h2>Appui aux Luttes Sociales</h2>
+                    <p>Cette personne est d’assurer un suivi sur les dossiers d’ordre politique. Elle organise au besoin des activités de sensibilisation aux positions défendues par l’Association, à la politique, et à l’engagement citoyen en général. Elle s’assure de la liaison entre l’Association et les syndicats du Collège, les organismes communautaires, sociaux et politiques. Elle prépare et informe l’Association des éléments nouveaux portés à son attention.</p>                  
+
+                </div>
+
+                <div class="span3">
+                     <h2>Coordonnateur Général</h2>
+                    <p>Cette personne est la responsable en chef de l’Association et son porte-parole. Elle assure la préparation des séances du CE et assure le suivi des décisions. Elle est également signataire et autorise toutes les dépenses relatives au fonctionnement courant de l’Association. De manière générale, elle assure la coordination de l’ensemble des élus de l’Association, des personnes qui s’y impliquent bénévolement et des employés de l’Association.</p>               
+
+                </div>
+
+            </div>
 
         </div>
     </body>
-
 </html>
