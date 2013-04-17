@@ -1,0 +1,11 @@
+
+header {
+    background: url('../img/background.gif');
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+}
+
+footer {
+    margin-bottom: 20px;
+}

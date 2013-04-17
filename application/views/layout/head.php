@@ -6,4 +6,6 @@
 <meta name="keywords" content="<?php echo $keywords ?>" />
 
 <?php echo HTML::style("asset/css/bootstrap.min.css") ?>
-<?php echo HTML::style("asset/css/bootstrap.min.js") ?>
+<?php echo HTML::style("asset/css/agebdeb.css") ?>
+
+<?php echo HTML::script("asset/css/bootstrap.min.js") ?>
