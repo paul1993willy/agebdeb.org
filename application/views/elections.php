@@ -6,6 +6,6 @@
 
 <ol>
     <li>Vous vous présentez au local de l'Association Étudiante, le <strong>S-159</strong>.</li>
-    <li>Vous remplissez le formulaire approprié. <?php echo HTML::file_anchor("documents/elections/formulaire", "Télécharger le formulaire") ?>.</li>
+    <li>Vous remplissez le formulaire approprié. Il se trouve à l'Annexe 2 des <?php echo HTML::file_anchor("documents/reglements-generaux-et-particuliers-2012.pdf", "Règlements Généraux et Particuliers de l'AGEBdeB") ?>.</li>
     <li>Vous le remettez à une personne en charge tel un permanent, ou bien en mains propres au <strong>Directeur et Comissaires Électoraux</strong>.</li>
 </ol>
