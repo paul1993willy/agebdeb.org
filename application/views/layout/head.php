@@ -9,3 +9,5 @@
 <?php echo HTML::style("asset/css/agebdeb.css") ?>
 
 <?php echo HTML::script("asset/css/bootstrap.min.js") ?>
+
+<?php echo View::factory("layout/analytics") ?>

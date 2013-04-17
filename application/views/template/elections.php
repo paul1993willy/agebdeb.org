@@ -7,6 +7,8 @@
         <title>Élections du Conseil Exécutif 2013-2014</title>
         <?php echo HTML::style("asset/css/bootstrap.min.css") ?>
         <?php echo HTML::style("asset/css/elections.css") ?>
+        <?php echo View::factory("layout/analytics") ?>
+
     </head>
 
     <body>
