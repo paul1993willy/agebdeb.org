@@ -13,3 +13,6 @@
 [submodule "modules/notifications"]
 	path = modules/notifications
 	url = https://github.com/Hete/kohana-notifications.git
+[submodule "modules/cms"]
+	path = modules/cms
+	url = https://github.com/noah-goodrich/kohana-cms.git
