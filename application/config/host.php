@@ -7,7 +7,12 @@ return array(
         'errors' => TRUE,
         'profile' => FALSE,
         'caching' => TRUE,
-        'environnement' => Kohana::PRODUCTION,
+        'environment' => Kohana::PRODUCTION,
+    ),
+    'localhost' => array(
+        'base_url' => '/',
+        'caching' => FALSE,
+        'environment' => Kohana::DEVELOPMENT,
     ),
     'agebdeb\.org' => array(
         'base_url' => '/',
