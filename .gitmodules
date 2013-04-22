@@ -19,3 +19,9 @@
 [submodule "system"]
 	path = system
 	url = https://github.com/kohana/core.git
+[submodule "application/classes/host"]
+	path = application/classes/host
+	url = git@github.com:Hete/kohana-host.git
+[submodule "modules/error"]
+	path = modules/error
+	url = https://github.com/Hete/kohana-error.git

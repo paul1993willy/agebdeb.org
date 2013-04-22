@@ -79,7 +79,8 @@ Kohana::modules(array(
     // 'userguide' => MODPATH . 'userguide', // User guide and API documentation
     'bootstrap' => MODPATH . 'bootstrap', // User guide and API documentation
     'notifications' => MODPATH . 'notifications', // User guide and API documentation
-    'mail' => MODPATH . 'mail'
+    'mail' => MODPATH . 'mail',
+    'error' => MODPATH . 'error'
 ));
 
 Route::set("comites", "comites/<comite>")

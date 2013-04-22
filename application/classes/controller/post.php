@@ -1,5 +1,7 @@
 <?php
 
+defined('SYSPATH') or die('No direct script access.');
+
 class Controller_Post extends Controller_Template_Age {
 
     /**
