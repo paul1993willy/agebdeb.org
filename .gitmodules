@@ -16,3 +16,6 @@
 [submodule "modules/cms"]
 	path = modules/cms
 	url = https://github.com/noah-goodrich/kohana-cms.git
+[submodule "system"]
+	path = system
+	url = https://github.com/kohana/core.git
