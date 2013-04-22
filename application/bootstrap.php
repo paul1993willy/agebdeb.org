@@ -82,6 +82,10 @@ Kohana::modules(array(
     'mail' => MODPATH . 'mail'
 ));
 
+Route::set("comites", "comites/<comite>")
+        ->defaults(array(
+            "controller" => "comites"
+        ));
 
 Route::set('default', '(<controller>(/<action>))')
         ->defaults(array(
