@@ -2,6 +2,13 @@
 
 defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * Contrôlleur général pour le site de l'AGEBdeB.
+ * 
+ * @package agebdeb.org
+ * @category Controllers
+ * @author Paul-Willy Jean <paul1993willy@gmail.com>
+ */
 abstract class Controller_Template_AGEBdeB extends Controller_Template {
 
     protected $title = "Association générale étudiante de Bois-de-Boulogne";

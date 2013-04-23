@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-        <title>Élections du Conseil Exécutif 2013-2014</title>
-        <?php echo HTML::style("asset/css/bootstrap.min.css") ?>
-        <?php echo HTML::style("asset/css/elections.css") ?>
-        <?php echo View::factory("layout/analytics") ?>
-
-    </head>
+    <head><?php echo View::factory("layout/head") ?></head>
 
     <body>
 

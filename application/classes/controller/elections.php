@@ -1,6 +1,17 @@
 <?php
 
-class Controller_Elections extends Controller_Template {
+defined('SYSPATH') or die('No direct script access.');
+
+/**
+ * Contrôlleur pour la page des élections.
+ * 
+ * @package agebdeb.org
+ * @category Controllers
+ * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
+ */
+class Controller_Elections extends Controller_Template_AGEBdeB {
+    
+    protected $title = "Élections du Conseil Exécutif 2013-2014";
 
     public static $POSTES = array(
         "Coordonnateur Général",
@@ -16,24 +27,7 @@ class Controller_Elections extends Controller_Template {
 
     public function action_index() {
         $this->template->content = View::factory("elections");
-    }
-
-    public function action_postuler() {
-
-        $candidature = Model::factory("candidature");
-
-        $this->template->content = View::factory("elections/postuler", array("candidature" => $candidature));
-
-        if ($this->request->method() !== Request::POST) {
-            return;
-        }
-
-        $candidature->values($this->request->post("candidature"), array("nom", "prenom", "poste", "description", "admission"));
-
-        if ($candidature->check()) {
-            Mail_Sender::factory()->send($candidature, "mail/elections/postuler", array("candidature" => $candidature));
-        }
-    }
+    }   
 
 }
 
