@@ -81,7 +81,8 @@ Kohana::modules(array(
     'notifications' => MODPATH . 'notifications', // User guide and API documentation
     'mail' => MODPATH . 'mail',
     'error' => MODPATH . 'error',
-    'minify' => MODPATH . 'minify'
+    'minify' => MODPATH . 'minify',
+    'urlang' => MODPATH . 'urlang'
 ));
 
 Route::set("comites", "comites/<comite>")
