@@ -14,12 +14,14 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
     protected $title = "Association générale étudiante de Bois-de-Boulogne";
     protected $description = "Le site de l'association générale étudiante de bois de boulogne";
     protected $keywords = array();
-    
+    protected $css = array("bootstrap.css", "agebdeb.css");
+    protected $js = array();
+
     /**
      *
      * @var View
      */
-    public $template = 'template/agebdeb';    
+    public $template = 'template/agebdeb';
 
     /**
      * Contenu principal
@@ -45,6 +47,10 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
         View::set_global('title', $this->title);
         View::set_global('description', $this->description);
         View::set_global('keywords', implode(", ", $this->keywords));
+
+        // Fichiers à minifier
+        View::set_global("js", $this->js);
+        View::set_global("css", $this->css);
 
         $this->template->content = $this->content;
 

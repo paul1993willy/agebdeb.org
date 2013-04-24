@@ -5,10 +5,13 @@
 <meta name="description" content="<?php echo __($description) ?>" />
 <meta name="keywords" content="<?php echo $keywords ?>" />
 
-<?php echo HTML::style("asset/css/bootstrap.min.css") ?>
-<?php echo HTML::style("asset/css/agebdeb.css") ?>
+<?php foreach (Minify::factory("css")->minify($css) as $min): ?>
+    <?php echo HTML::style($min) ?>
+<?php endforeach; ?>
 
-<?php echo HTML::script("asset/css/bootstrap.min.js") ?>
+<?php foreach (Minify::factory("js")->minify($js) as $min): ?>
+    <?php echo HTML::script($min) ?>
+<?php endforeach; ?>
 
 <script type="text/javascript">
     (function(i, s, o, g, r, a, m) {

@@ -11,7 +11,7 @@ return array(
     ),
     'localhost' => array(
         'caching' => FALSE,
-        'environment' => Kohana::PRODUCTION,
+        'environment' => Kohana::DEVELOPMENT,
         'salt' => 'asdq32u483248932riewhfsd78yf',
     ),
     'agebdeb\.org' => array(

@@ -26,6 +26,9 @@ class Controller_Elections extends Controller_Template_AGEBdeB {
     public $template = "template/elections";
 
     public function action_index() {
+        
+        $this->css[] = "elections.css";
+        
         $this->template->content = View::factory("elections");
     }   
 
