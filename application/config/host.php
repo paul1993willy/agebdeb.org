@@ -1,5 +1,7 @@
 <?php
 
+defined('SYSPATH') or die('No direct script access.');
+
 return array(
     'default' => array(
         'base_url' => '/agebdeb.org/',
@@ -11,7 +13,7 @@ return array(
     ),
     'localhost' => array(
         'caching' => FALSE,
-        'environment' => Kohana::DEVELOPMENT,
+        'environment' => Kohana::PRODUCTION,
         'salt' => 'asdq32u483248932riewhfsd78yf',
     ),
     'agebdeb\.org' => array(

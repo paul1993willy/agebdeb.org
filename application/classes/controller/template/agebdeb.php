@@ -38,6 +38,10 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
         $default_view = $this->request->controller() . $default_action;
         $this->content = $this->content ? $this->content : $default_view;
 
+        if (!Kohana::find_file("views", $this->content)) {
+            throw new HTTP_Exception_404();
+        }
+
         $this->content = View::factory($this->content);
     }
 
