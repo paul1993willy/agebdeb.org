@@ -7,7 +7,7 @@ return array(
         'errors' => TRUE,
         'profile' => FALSE,
         'caching' => TRUE,
-        'environment' => Kohana::PRODUCTION,       
+        'environment' => Kohana::PRODUCTION,
     ),
     'localhost' => array(
         'caching' => FALSE,
@@ -16,6 +16,7 @@ return array(
     ),
     'agebdeb\.org' => array(
         'base_url' => '/',
+        'salt' => Arr::get($_SERVER, 'COOKIE_SALT')
     )
 );
 ?>
