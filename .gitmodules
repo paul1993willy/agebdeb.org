@@ -25,3 +25,6 @@
 [submodule "modules/error"]
 	path = modules/error
 	url = https://github.com/Hete/kohana-error.git
+[submodule "modules/minify"]
+	path = modules/minify
+	url = https://github.com/arteymix/kohana-minify.git
