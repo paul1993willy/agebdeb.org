@@ -85,9 +85,10 @@ Kohana::modules(array(
     'urlang' => MODPATH . 'urlang'
 ));
 
-Route::set("comites", "comites/<comite>")
+Route::set("comites", "comites(/<comite>)")
         ->defaults(array(
-            "controller" => "comites"
+            "controller" => "comites",
+            "comite" => "coda"
         ));
 
 Route::set('default', '(<controller>(/<action>))')

@@ -1,9 +1,14 @@
-<ul class="nav nav-list well">
-    
-    <li class="nav-header">Comités</li>
-    <li class="active"><?php echo HTML::anchor("comites/coda", "Coda") ?></li>
-    <li><?php echo HTML::anchor("comites/miwaku", "Miwaku") ?></li>
+<?php
 
-    <li><a href="#">Library</a></li>
-    ...
-</ul>
+defined('SYSPATH') or die('No direct script access.');
+
+$links = array(
+    "<li class='nav-header'>Comités</li>",
+    "coda" => HTML::anchor("comites/coda", "Coda"),
+    "caleb" => HTML::anchor("comites/caleb", "Caleb"),
+    "miwaku" => HTML::anchor("comites/miwaku", "Miwaku"),
+    "infomane" => HTML::anchor("comites/infomane", "Infomane")
+);
+
+echo Bootstrap::nav_list($links, Request::current()->param("comite"), array("class" => "well"))
+?>
