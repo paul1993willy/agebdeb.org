@@ -1,0 +1,1 @@
+<?php echo View::factory("wp/$theme/post", array("post" => $post)) ?>

@@ -10,9 +10,9 @@
 [submodule "modules/search"]
 	path = modules/search
 	url = https://github.com/Hete/kohana-search.git
-[submodule "modules/notifications"]
-	path = modules/notifications
-	url = https://github.com/Hete/kohana-notifications.git
+[submodule "modules/notification"]
+	path = modules/notification
+	url = https://github.com/Hete/kohana-validform.git
 [submodule "modules/cms"]
 	path = modules/cms
 	url = https://github.com/noah-goodrich/kohana-cms.git
@@ -31,3 +31,9 @@
 [submodule "modules/urlang"]
 	path = modules/urlang
 	url = https://github.com/Hete/kohana-urlang
+[submodule "modules/orm-wordpress"]
+	path = modules/orm-wordpress
+	url = https://github.com/iizmoo/kohana-orm-wordpress.git
+[submodule "blog"]
+	path = blog
+	url = https://github.com/WordPress/WordPress.git

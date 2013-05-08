@@ -29,5 +29,20 @@ return array
         'caching' => FALSE,
         'profiling' => TRUE,
     ),
+    'wordpress' => array
+        (
+        'type' => 'mysql',
+        'connection' => array(
+            'hostname' => 'localhost',
+            'database' => 'agebdeb',
+            'username' => "agebdeb",
+            'password' => "agebdeb",
+            'persistent' => FALSE,
+        ),
+        'table_prefix' => 'wp_',
+        'charset' => 'utf8',
+        'caching' => FALSE,
+        'profiling' => TRUE,
+    ),
 );
 ?>

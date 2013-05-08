@@ -55,6 +55,8 @@ I18n::lang('fr');
 
 Host::init();
 
+View::set_global("theme", "bootstrap");
+
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
@@ -72,17 +74,19 @@ Kohana::modules(array(
     // 'auth'       => MODPATH.'auth',       // Basic authentication
     // 'cache'      => MODPATH.'cache',      // Caching with multiple backends
     // 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-    // 'database' => MODPATH . 'database', // Database access
+    'database' => MODPATH . 'database', // Database access
     // 'image'      => MODPATH.'image',      // Image manipulation
-    // 'orm' => MODPATH . 'orm', // Object Relationship Mapping
+    'orm' => MODPATH . 'orm', // Object Relationship Mapping
     // 'unittest'   => MODPATH.'unittest',   // Unit testing
     // 'userguide' => MODPATH . 'userguide', // User guide and API documentation
-    'bootstrap' => MODPATH . 'bootstrap', // User guide and API documentation
-    'notifications' => MODPATH . 'notifications', // User guide and API documentation
+    'bootstrap' => MODPATH . 'bootstrap', // Bootstrap helper
+    'notifications' => MODPATH . 'notification', // Notification system
     'mail' => MODPATH . 'mail',
     'error' => MODPATH . 'error',
     'minify' => MODPATH . 'minify',
-    'urlang' => MODPATH . 'urlang'
+    'urlang' => MODPATH . 'urlang',
+    'orm-wordpress' => MODPATH . 'orm-wordpress',
+    'oauth' => MODPATH . 'oauth',
 ));
 
 Route::set("comites", "comites(/<comite>)")
@@ -91,9 +95,19 @@ Route::set("comites", "comites(/<comite>)")
             "comite" => "coda"
         ));
 
-Route::set('default', '(<controller>(/<action>))')
-        ->defaults(array(
-            'controller' => 'accueil',
-            'action' => 'index',
-        ));
+Route::set('default', '(<controller>(/<action>))', array(
+))->defaults(array(
+    'controller' => 'accueil',
+    'action' => 'index',
+));
+
+Route::set("document", "document")->defaults(array(
+    "controller" => "document",
+    "action" => "index"
+));
+
+Route::set("formulaire", "formulaire(/<formulaire>)")->defaults(array(
+    "controller" => "formulaire",
+    "action" => "index"
+));
 ?>
