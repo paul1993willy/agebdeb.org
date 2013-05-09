@@ -37,3 +37,6 @@
 [submodule "blog"]
 	path = blog
 	url = https://github.com/WordPress/WordPress.git
+[submodule "modules/oauth"]
+	path = modules/oauth
+	url = https://github.com/kohana/oauth.git
