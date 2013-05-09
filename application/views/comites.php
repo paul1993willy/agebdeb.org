@@ -23,8 +23,11 @@
         <h4>Liens</h4>
 
         <ul class="unstyled">
-            <li><?php echo HTML::anchor("https://docs.google.com/document/d/1uf5eQxLGmgoBH245HRykhOsPpqeIjIOho0m3DrP7ibM/", "Charte du Coda") ?></li>
-        </ul>
+            <?php foreach ($comite->liens->find_all() as $lien): ?>
 
+                <?php echo HTML::anchor($lien->url, $lien->titre); ?>
+
+            <?php endforeach; ?>
+        </ul>
     </div>
 </div>
