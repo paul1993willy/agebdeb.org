@@ -1,4 +1,4 @@
-<div class="post well">
+<div class="post">
 
     <h3><?php echo HTML::anchor($post->guid, $post->post_title) ?></h3>
 
