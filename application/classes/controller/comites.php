@@ -10,9 +10,9 @@ defined('SYSPATH') or die('No direct script access.');
  * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
  */
 class Controller_Comites extends Controller_Template_AGEBdeB {
-    
+
     public function action_index() {
-        $this->content->comite = $this->request->param("comite");
+        $this->content->comite = ORM::factory("comite", array("nom_url" => $this->request->param("comite")));
     }
 
 }
