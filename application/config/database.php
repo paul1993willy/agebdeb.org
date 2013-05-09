@@ -8,18 +8,21 @@ return array
         (
         'type' => 'mysql',
         'connection' => array(
-            /**
-             * The following options are available for MySQL:
-             *
-             * string   hostname     server hostname, or socket
-             * string   database     database name
-             * string   username     database username
-             * string   password     database password
-             * boolean  persistent   use persistent connections?
-             * array    variables    system variables as "key => value" pairs
-             *
-             * Ports and sockets may be appended to the hostname.
-             */
+            'hostname' => 'agebdeb.db.10906325.hostedresource.com',
+            'database' => 'agebdeb',
+            'username' => "agebdeb",
+            'password' => Arr::get($_SERVER, 'DATABASE_PASSWORD'),
+            'persistent' => FALSE,
+        ),
+        'table_prefix' => '',
+        'charset' => 'utf8',
+        'caching' => TRUE,
+        'profiling' => FALSE,
+    ),
+    'localhost' => array
+        (
+        'type' => 'mysql',
+        'connection' => array(
             'hostname' => 'localhost',
             'database' => 'agebdeb',
             'username' => "agebdeb",
@@ -35,10 +38,10 @@ return array
         (
         'type' => 'mysql',
         'connection' => array(
-            'hostname' => 'localhost',
+            'hostname' => 'agebdeb.db.10906325.hostedresource.com',
             'database' => 'agebdeb',
             'username' => "agebdeb",
-            'password' => "agebdeb",
+            'password' => Arr::get($_SERVER, 'DATABASE_PASSWORD'),
             'persistent' => FALSE,
         ),
         'table_prefix' => 'wp_',

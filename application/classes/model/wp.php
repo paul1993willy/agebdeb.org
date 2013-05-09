@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of wp
  *
@@ -12,7 +7,7 @@
  */
 class Model_WP extends Kohana_Model_WP {
 
-    protected $_db_group = "wordpress";
+    protected $_db_group = 'wordpress';
 
 }
 

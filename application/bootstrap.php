@@ -88,6 +88,8 @@ Kohana::modules(array(
     'orm-wordpress' => MODPATH . 'orm-wordpress',
 ));
 
+Database::$default = Host::current('database');
+
 Route::set("comites", "comites(/<comite>)")
         ->defaults(array(
             "controller" => "comites",

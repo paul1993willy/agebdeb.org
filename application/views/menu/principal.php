@@ -4,6 +4,7 @@ defined('SYSPATH') or die('No direct script access.');
 $links = array(
     "accueil" => HTML::anchor("", "Accueil"),
     "comites" => HTML::anchor("comites", "Comités"),
+    "blog" => HTML::anchor("blog", "Blog"),
 );
 ?>
 

@@ -11,8 +11,9 @@ defined('SYSPATH') or die('No direct access allowed.');
  */
 class Model_User extends Model_Auth_User {
 
-    protected $_primary_key = "ID";
     protected $_db_group = 'wordpress';
+    
+    protected $_primary_key = "ID";
 
 }
 
