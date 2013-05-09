@@ -86,7 +86,6 @@ Kohana::modules(array(
     'minify' => MODPATH . 'minify',
     'urlang' => MODPATH . 'urlang',
     'orm-wordpress' => MODPATH . 'orm-wordpress',
-    'oauth' => MODPATH . 'oauth',
 ));
 
 Route::set("comites", "comites(/<comite>)")
