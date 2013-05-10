@@ -53,6 +53,9 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
  */
 I18n::lang('fr');
 
+/**
+ * Initialize Kohana based on current host.
+ */
 Host::init();
 
 View::set_global("theme", "bootstrap");
@@ -86,7 +89,6 @@ Kohana::modules(array(
     'minify' => MODPATH . 'minify',
     'urlang' => MODPATH . 'urlang',
     'orm-wordpress' => MODPATH . 'orm-wordpress',
-    'oauth' => MODPATH . 'oauth',
 ));
 
 Route::set("comites", "comites(/<comite>)")

@@ -1,15 +1,7 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+defined('SYSPATH') or die('No direct access allowed.');
 
-/**
- * Description of wp
- *
- * @author guillaume
- */
 class Model_WP extends Kohana_Model_WP {
 
     protected $_db_group = "wordpress";

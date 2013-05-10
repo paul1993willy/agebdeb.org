@@ -1,17 +1,20 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+defined('SYSPATH') or die('No direct access allowed.');
 
 /**
- * Description of formulaire
- *
- * @author guillaume
+ * 
+ * @package agebdeb.org
+ * @category Models
+ * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
  */
 class Model_Formulaire extends ORM {
-    //put your code here
+
+    protected $_has_many = array(
+        'champs' => array(),
+        'postes' => array()
+    );
+
 }
 
 ?>

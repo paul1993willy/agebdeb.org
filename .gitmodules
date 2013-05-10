@@ -21,7 +21,7 @@
 	url = https://github.com/kohana/core.git
 [submodule "application/classes/host"]
 	path = application/classes/host
-	url = git@github.com:Hete/kohana-host.git
+	url = https://github.com/Hete/kohana-host.git
 [submodule "modules/error"]
 	path = modules/error
 	url = https://github.com/Hete/kohana-error.git
@@ -33,7 +33,7 @@
 	url = https://github.com/Hete/kohana-urlang
 [submodule "modules/orm-wordpress"]
 	path = modules/orm-wordpress
-	url = https://github.com/iizmoo/kohana-orm-wordpress.git
+	url = https://github.com/arteymix/kohana-orm-wordpress.git
 [submodule "blog"]
 	path = blog
 	url = https://github.com/WordPress/WordPress.git

@@ -2,7 +2,10 @@
 
 defined('SYSPATH') or die('No direct access allowed.');
 
-class Host extends Host_Core {
+/**
+ * Règle de validation.
+ */
+class Model_Regle extends ORM {
     
 }
 
