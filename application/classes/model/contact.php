@@ -1,8 +1,12 @@
 <?php
 
+defined('SYSPATH') or die('No direct access allowed.');
+
 /**
  * Description of contact
  *
+ * @todo Convertir avec le système de formulaire.
+ * 
  * @package agebdeb.org
  * @category Models
  * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
