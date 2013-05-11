@@ -89,6 +89,7 @@ Kohana::modules(array(
     'minify' => MODPATH . 'minify',
     'urlang' => MODPATH . 'urlang',
     'orm-wordpress' => MODPATH . 'orm-wordpress',
+    // 'captcha' => MODPATH . 'captcha'
 ));
 
 Database::$default = Host::current('database');

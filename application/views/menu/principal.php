@@ -4,7 +4,8 @@ defined('SYSPATH') or die('No direct script access.');
 $links = array(
     "accueil" => HTML::anchor("", "Accueil"),
     "comites" => HTML::anchor("comites", "Comités"),
-    "blog" => HTML::anchor("blog", "Blog"),
+    "blog" => HTML::anchor("http://www.agebdeb.org/blog", "Blog"),
+    "liens" => HTML::anchor('liens', 'Liens utiles')
 );
 ?>
 

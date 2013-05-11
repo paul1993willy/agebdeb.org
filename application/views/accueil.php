@@ -5,9 +5,14 @@
 
         <h1>À propos</h1>
 
-        <p>L'Association Étudiante du Collège de Bois-de-Boulogne est un regroupement d'étudiants.</p>
+        <p>L’Association générale des étudiants de Bois-de-Boulogne (AGEBdeB) est une association étudiante défendant les droits et les intérêts des étudiantes et étudiants du collège de Bois-de-Boulogne, à Montréal. Établie depuis les années 1970, elle mène des campagnes de sensibilisation et d’information auprès de la population étudiante, organise des activités étudiantes, chapeaute des comités aux vocations artistiques, politiques, sociocommunautaires, médiatiques, de divertissement et de loisirs, défend les droits de la population étudiante auprès des instances de la direction et des différents paliers de gouvernement, et s’arrime aux mouvements sociaux étudiants à travers le Québec.</p>
 
-        <h2>Fil d'actualité</h2>
+        <p>L’Association Générale des Étudiants du Collège de Bois-de-Boulogne(AGEBdeB) regroupe toutes les personnes inscrites à temps plein, partiel et à la formation continue au cégep de Bois-de-Boulogne qui se situe dans la région de Montréal, au Québec.</p>
+
+        <p>Elle regroupe un total de près de 3200 membres et n’est membre d’aucune association étudiante nationale.</p>
+
+        <p>Elle a rejoint la CLASSE depuis le 12 mars 2012.</p>
+
         <?php foreach (ORM::factory("wp_term", array("slug" => "accueil"))->posts->order_by("post_date", "DESC")->find_all() as $post): ?>
 
             <?php echo View::factory("wp/post", array("post" => $post)) ?>
@@ -27,6 +32,16 @@
 
         <h3>Contacter l'Association</h3>
 
+        <h5>En personne</h5>
+        <p>Au local S-159, pavillion Ignace-Bourget</p>
+
+        <h5>Par téléphone</h5>
+        <p>(514) 332-3000 poste 7580</p>
+
+        <h5>Par courriel</h5>
+        <?php echo HTML::mailto('age@age.bdeb.qc.ca') ?>
+
+        <h5>En ligne</h5>
         <?php $contact = Model::factory("contact") ?>
 
         <?php echo Form::open("accueil/contact") ?>
@@ -48,9 +63,6 @@
         </div>
 
         <?php echo Form::close() ?>
-
-        <h3>Événements</h3>
-
 
     </div>
 </div>
