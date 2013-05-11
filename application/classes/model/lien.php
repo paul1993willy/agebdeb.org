@@ -1,13 +1,10 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of lien
  *
+ * @deprecated utiliser wp_links
+ * 
  * @author guillaume
  */
 class Model_Lien extends ORM {

@@ -11,8 +11,8 @@ defined('SYSPATH') or die('No direct access allowed.');
 class Model_Formulaire extends ORM {
 
     protected $_has_many = array(
-        'champs' => array(),
-        'postes' => array()
+        'champs' => array('through' => 'formulaires_champs'), // Champs du formulaire
+        'postes' => array() // Postes notifiés quand le formulaire est remplis
     );
 
 }

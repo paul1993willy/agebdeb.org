@@ -3,7 +3,11 @@
 defined('SYSPATH') or die('No direct access allowed.');
 
 /**
- * Règles appliquées aux champs de formulaire.
+ * Associe une règle de validation avec un champ de formulaire.
+ * 
+ * @package agebdeb.org
+ * @category Models
+ * @author Guillaume Poirier-Morency
  */
 class Model_Champ_Regle extends ORM {
 
