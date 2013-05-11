@@ -13,7 +13,8 @@ defined('SYSPATH') or die('No direct access allowed.');
 class Model_Poste extends ORM {
     
     protected $_belongs_to = array(
-        'comite' => array()
+        'comite' => array(),
+        'user' => array()
     );
 
     protected $_has_many = array(

@@ -89,7 +89,7 @@ Kohana::modules(array(
     'minify' => MODPATH . 'minify',
     'urlang' => MODPATH . 'urlang',
     'orm-wordpress' => MODPATH . 'orm-wordpress',
-    // 'captcha' => MODPATH . 'captcha'
+        // 'captcha' => MODPATH . 'captcha'
 ));
 
 Database::$default = Host::current('database');
@@ -97,7 +97,7 @@ Database::$default = Host::current('database');
 Route::set("comites", "comites(/<comite>)")
         ->defaults(array(
             "controller" => "comites",
-            "comite" => "coda"
+            'comite' => 'conseil-executif'
         ));
 
 Route::set('default', '(<controller>(/<action>))', array(

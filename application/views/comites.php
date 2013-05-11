@@ -5,14 +5,19 @@
 
         <?php echo View::factory("menu/comites") ?>
 
-        <?php foreach ($comite->users->find_all() as $user): ?>
+        <ul class="unstyled">
+            <?php foreach ($comite->postes->find_all() as $poste): ?>
 
-            <?php $poste = ORM::factory("user_comite", array("user_id" => $user, "comite_id" => $comite))->poste ?>
+                <li>
+                    <h4><?php echo $poste->nom ?></h4>
 
-            <?php echo Bootstrap::media(Gravatar::image($user->user_email), "<h4 class='media-heading'>$poste->nom</h4><p>$user->user_nicename</p><p>$poste->description</p>") ?>
+                    <h5><?php echo $poste->user->loaded() ? $poste->user->user_nicename : "Vacant" ?></h5>
 
-        <?php endforeach ?>
+                    <p><?php echo $poste->description ?></p>
+                </li>
 
+            <?php endforeach ?>
+        </ul>
 
     </div>
     <div class="span9">
@@ -32,7 +37,13 @@
         </ul>
 
         <section class="actualite">
-            
+
+            <?php foreach ($posts as $post): ?>
+
+                <?php echo View::factory('wp/post', array('post' => $post)) ?>
+
+            <?php endforeach; ?>
+
         </section>
 
 

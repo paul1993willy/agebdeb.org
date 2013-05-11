@@ -13,11 +13,15 @@
 
         <p>Elle a rejoint la CLASSE depuis le 12 mars 2012.</p>
 
-        <?php foreach (ORM::factory("wp_term", array("slug" => "accueil"))->posts->order_by("post_date", "DESC")->find_all() as $post): ?>
+
+        <?php foreach ($posts as $post): ?>
 
             <?php echo View::factory("wp/post", array("post" => $post)) ?>
 
         <?php endforeach; ?>
+
+        <h3><?php echo HTML::anchor('blog', 'Lire les autres articles...') ?></h3>
+
     </div>
     <div class="span4">
         <h3>L'AGEBdeB, c'est</h3>
@@ -58,7 +62,7 @@
             <?php echo Form::textarea("contact[message]", $contact->message, array("placeholder" => "Message", "class" => "span4")) ?>
         </div>
 
-        <div class="control-group text-right">
+        <div class="control-group text-right">            
             <?php echo Bootstrap::button("Envoyer", NULL, NULL, "primary") ?>
         </div>
 

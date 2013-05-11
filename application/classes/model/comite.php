@@ -14,8 +14,12 @@ class Model_Comite extends ORM {
     protected $_has_many = array(
         "users" => array("through" => "users_comites"),
         'links' => array('through' => 'links_comites'),
-        'posts' => array('through' => 'terms', 'model' => 'wp_term')
+        'postes' => array()
     );
+    
+    public function posts() {
+        return ORM::factory('wp_term', array('name' => $this->nom))->posts;
+    }
 
 }
 
