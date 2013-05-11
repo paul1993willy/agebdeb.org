@@ -1,7 +1,10 @@
 <?php defined('SYSPATH') or die('No direct access allowed.'); ?>
 
 <div class="row">
+
     <div class="span3">
+
+        <p><?php echo HTML::image("asset/img/comites/$comite->nom_url.svg", array("class" => "row-fluid")) ?></p>
 
         <?php echo View::factory("menu/comites") ?>
 
@@ -20,11 +23,10 @@
         </ul>
 
     </div>
-    <div class="span9">
+    <div class="span9">   
 
-        <?php defined('SYSPATH') or die('No direct script access.'); ?>
 
-        <h2><?php echo $comite->nom ?> <small><?php echo $comite->description ?></small></h2>
+        <h2 class="media-heading"><?php echo $comite->nom ?> <small><?php echo $comite->description ?></small></h2>
 
         <?php echo Text::auto_p($comite->description_long) ?>    
 
@@ -45,7 +47,6 @@
             <?php endforeach; ?>
 
         </section>
-
 
     </div>
 </div>
