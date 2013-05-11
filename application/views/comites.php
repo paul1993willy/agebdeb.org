@@ -32,11 +32,7 @@
         </ul>
 
         <section class="actualite">
-            <?php foreach ($comite->posts->find_all() as $post): ?>
-
-                <?php echo View::factory('wp/post', array('post' => $post)) ?>
-
-            <?php endforeach; ?>
+            
         </section>
 
 
