@@ -40,3 +40,6 @@
 [submodule "modules/captcha"]
 	path = modules/captcha
 	url = https://github.com/kolanos/kohana-captcha.git
+[submodule "modules/sitemap"]
+	path = modules/sitemap
+	url = https://github.com/ThePixelDeveloper/kohana-sitemap.git
