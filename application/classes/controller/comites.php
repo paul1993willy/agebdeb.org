@@ -29,7 +29,12 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
 
     public function action_index() {
         $this->content->posts = $this->comite->posts()
+                ->where('post_type', '=', 'post')
+                ->where('post_status', 'NOT IN', DB::expr("('draft', 'auto-draft', 'trash')"))
+                ->limit(5)
+                ->group_by(DB::expr('ID, post_parent'))
                 ->order_by('post_date', 'DESC')
+                ->cached()
                 ->find_all();
     }
 

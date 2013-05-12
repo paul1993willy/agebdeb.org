@@ -17,6 +17,7 @@ class Controller_Accueil extends Controller_Template_AgeBdeB {
                 ->limit(5)
                 ->group_by(DB::expr('ID, post_parent'))
                 ->order_by('post_date', 'DESC')
+                ->cached()
                 ->find_all();
     }
 
