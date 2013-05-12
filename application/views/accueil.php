@@ -83,7 +83,7 @@
         </div>
 
         <div class="control-group">
-            <?php $checkbox = Form::checkbox('rememberme', 'forever', array('id' => 'rememberme')) ?>
+            <?php $checkbox = Form::checkbox('rememberme', 'forever', FALSE, array('id' => 'rememberme')) ?>
             <?php echo Form::label('rememberme', "$checkbox Se souvenir de moi", array('class' => 'checkbox')) ?>
         </div>
 

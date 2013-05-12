@@ -6,7 +6,9 @@ $links = array(
     "comites" => HTML::anchor("comites", "Comités"),
     "blog" => HTML::anchor("http://www.agebdeb.org/blog", "Blog"),
     "liens" => HTML::anchor('liens', 'Liens utiles'),
-    "archives" => HTML::anchor('archives', 'Archives')
+    "documents" => HTML::anchor('blog/documents-utiles', 'Documents utiles'),
+    "archives" => HTML::anchor('archives', 'Archives'),
+    "authentification" => HTML::anchor('blog/wp-login.php', 'Authentification')
 );
 ?>
 
