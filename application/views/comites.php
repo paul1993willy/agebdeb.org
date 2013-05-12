@@ -9,7 +9,7 @@
         <?php echo View::factory("menu/comites") ?>
 
         <ul class="unstyled">
-            <?php foreach ($comite->postes->find_all() as $poste): ?>
+            <?php foreach ($comite->postes->order_by("nom")->find_all() as $poste): ?>
 
                 <li>
                     <h4><?php echo $poste->nom ?></h4>
@@ -24,7 +24,6 @@
 
     </div>
     <div class="span9">   
-
 
         <h2 class="media-heading"><?php echo $comite->nom ?> <small><?php echo $comite->description ?></small></h2>
 

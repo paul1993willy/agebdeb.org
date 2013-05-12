@@ -68,5 +68,29 @@
 
         <?php echo Form::close() ?>
 
+        <h3>Authentification</h3>
+
+        <?php echo Form::open("blog/wp-login.php") ?>
+
+        <div class="control-group">
+            <?php echo Form::label('log', "Nom d'utilisateur") ?>
+            <?php echo Form::input('log', NULL, array('id' => 'log', 'class' => 'span4', 'placeholder' => "Nom d'utilisateur")) ?>
+        </div>
+
+        <div class="control-group">
+            <?php echo Form::label('pwd', "Mot de passe") ?>
+            <?php echo Form::password('pwd', NULL, array('id' => 'pwd', 'class' => 'span4', 'placeholder' => "Mot de passe")) ?>
+        </div>
+
+        <div class="control-group">
+            <?php $checkbox = Form::checkbox('rememberme', 'forever', array('id' => 'rememberme')) ?>
+            <?php echo Form::label('rememberme', "$checkbox Se souvenir de moi", array('class' => 'checkbox')) ?>
+        </div>
+
+        <div class="control-group text-right">
+            <?php echo Bootstrap::button("Connexion", NULL, NULL, "success") ?>
+        </div>
+
+        <?php echo Form::close() ?>
     </div>
 </div>

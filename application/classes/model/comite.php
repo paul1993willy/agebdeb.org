@@ -12,11 +12,11 @@ defined('SYSPATH') or die('No direct script access.');
 class Model_Comite extends ORM {
 
     protected $_has_many = array(
-        "users" => array("through" => "users_comites"),
+        'users' => array('through' => 'users_comites'),
         'links' => array('through' => 'links_comites'),
         'postes' => array()
     );
-    
+
     public function posts() {
         return ORM::factory('wp_term', array('name' => $this->nom))->posts;
     }

@@ -16,7 +16,6 @@
     <div class="span6">
 
         <h5>Pétition officielle sur le site de l'assemblée nationale</h5>
-
         <a title="Calendrier et état de la grève" href="http://www.bloquonslahausse.com">Calendrier des votes et état du nombre d'associations en grève;</a>
 
         <h3>Organisations étudiantes nationales</h3>
@@ -70,7 +69,6 @@
 
         <h5>Professeurs contre la hausse</h5>
         <a title="Profs contre la hausse" href="profscontrelahausse.org/">profscontrelahausse.org/</a>
-
 
     </div>
 </div>

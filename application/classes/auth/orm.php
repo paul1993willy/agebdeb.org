@@ -6,11 +6,11 @@
  */
 
 /**
- * Description of wordpress
+ * Description of orm
  *
  * @author guillaume
  */
-class Auth_Wordpress extends Auth_ORM {
+class Auth_ORM extends Kohana_Auth_ORM {
     //put your code here
 }
 

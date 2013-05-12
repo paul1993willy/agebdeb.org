@@ -13,7 +13,6 @@ return array(
         'database' => 'default'
     ),
     'localhost' => array(
-        'caching' => FALSE,
         'environment' => Kohana::PRODUCTION,
         'salt' => 'asdq32u483248932riewhfsd78yf',
         //'database' => 'localhost'

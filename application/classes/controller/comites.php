@@ -34,7 +34,9 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
     }
 
     public function action_modifier() {
-        
+        if (!$this->comite->has("users", Auth::instance()->get_user())) {
+            throw new HTTP_Exception_401("Vous n'avez pas le droit de modifier ce comité.");
+        }
     }
 
 }
