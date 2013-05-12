@@ -5,10 +5,20 @@ defined('SYSPATH') or die('No direct script access.');
 /**
  * 
  * @package agebdeb.org
+ * @category Helpers
  * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
  */
 class HTML extends Kohana_HTML {
 
+    /**
+     * Génère un favicon.
+     * 
+     * @param string $file
+     * @param array $attributes
+     * @param type $protocol
+     * @param type $index
+     * @return string
+     */
     public static function favicon($file, array $attributes = NULL, $protocol = NULL, $index = FALSE) {
 
         if (strpos($file, '://') === FALSE) {

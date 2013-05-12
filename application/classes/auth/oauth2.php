@@ -16,9 +16,9 @@ class Auth_OAuth2 extends Auth {
         
         $provider = OAuth2_Provider::factory(Kohana::$config->load("auth.oauth2_provider"));
 
-        $provider->
+        //$provider->
         
-        OAuth2_Request::factory("", $method)
+        OAuth2_Request::factory("", $method);
 
         return $this->complete_login($username);
     }

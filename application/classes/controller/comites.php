@@ -11,6 +11,8 @@ defined('SYSPATH') or die('No direct script access.');
  */
 class Controller_Comites extends Controller_Template_AGEBdeB {
 
+    protected $keywords = array('comites', 'engagement');
+
     /**
      *
      * @var Model_Comite
