@@ -1,15 +1,18 @@
 <?php defined('SYSPATH') or die('No direct script access.'); ?>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo __($title) ?></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="<?php echo __($description) ?>" />
 <meta name="keywords" content="<?php echo $keywords ?>" />
 
-<?php foreach (Minify::factory("css")->minify($css) as $min): ?>
+<?php echo HTML::favicon('asset/img/favicon.png') ?>
+
+<?php foreach (Minify::factory('css')->minify($css) as $min): ?>
     <?php echo HTML::style($min) ?>
 <?php endforeach; ?>
 
-<?php foreach (Minify::factory("js")->minify($js) as $min): ?>
+<?php foreach (Minify::factory('js')->minify($js) as $min): ?>
     <?php echo HTML::script($min) ?>
 <?php endforeach; ?>
 
