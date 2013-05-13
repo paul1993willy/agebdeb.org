@@ -1,2 +1,8 @@
 # Raw files
 /asset/raw/
+
+# Blog itself (wordpress is updateable anyway)
+/blog/
+
+# Test files
+/application/tests/
