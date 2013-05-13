@@ -12,8 +12,7 @@
         <p>Elle regroupe un total de près de 3200 membres et n’est membre d’aucune association étudiante nationale.</p>
 
         <p>Elle a rejoint la CLASSE depuis le 12 mars 2012.</p>
-
-
+        
         <?php foreach ($posts as $post): ?>
 
             <?php echo View::factory("wp/post", array("post" => $post)) ?>
@@ -24,9 +23,14 @@
 
     </div>
     <div class="span4">
-        <h3>L'AGEBdeB, c'est</h3>
 
-        <?php foreach (ORM::factory('comite', array('nom_url' => 'conseil-executif'))->postes->order_by('nom')->cached()->find_all() as $poste): ?>
+        <?php $comite_principal = ORM::factory('comite', array('nom_url' => 'conseil-executif')) ?>
+
+        <h3><?php echo $comite_principal->nom ?></h3>
+
+        <p><?php echo Text::limit_chars($comite_principal->description_long) ?> <?php echo HTML::anchor('comites/' . $comite_principal->nom_url, 'En savoir plus...') ?></p>
+
+        <?php foreach ($comite_principal->postes->order_by('nom')->cached()->find_all() as $poste): ?>
 
             <div class="row" >
 
