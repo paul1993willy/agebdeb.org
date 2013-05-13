@@ -3,7 +3,8 @@
 defined('SYSPATH') or die('No direct script access.');
 
 return array(
-    'from_name' => 'AGEBdeB',
-    'from_email' => 'noreply@agebdeb.org'
+    'headers' => array(
+        'From' => 'AGEBdeB <noreply@agebdeb.org>',
+    )
 );
 ?>

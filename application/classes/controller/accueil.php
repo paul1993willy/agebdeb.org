@@ -34,9 +34,9 @@ class Controller_Accueil extends Controller_Template_AgeBdeB {
 
         if ($this->request->method() === Request::POST) {
 
-            $contact = Model::factory("contact");
+            $contact = Model::factory('contact');
 
-            $contact->values($this->request->post("contact"));
+            $contact->values($this->request->post('contact'));
 
             if ($contact->check()) {
                 // Envoi du courriel
