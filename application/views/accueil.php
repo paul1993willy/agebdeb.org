@@ -27,14 +27,15 @@
         <h3>L'AGEBdeB, c'est</h3>
 
         <?php foreach (ORM::factory('comite', array('nom_url' => 'conseil-executif'))->postes->order_by('nom')->cached()->find_all() as $poste): ?>
-            <div class="row">
 
-                <div class="span2">
-                    <?php echo HTML::mailto($poste->courriel, Text::limit_chars($poste->nom, 16), array('title' => $poste->nom, 'class' => 'tooltip-toggle')) ?>
+            <div class="row" >
+
+                <div class="span2" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;" >
+                    <?php echo HTML::mailto($poste->courriel, $poste->nom, array('title' => $poste->nom, 'class' => 'tooltip-toggle')) ?>
                 </div>   
 
-                <div class="span2">
-                    <?php echo Text::limit_chars($poste->user->loaded() ? $poste->user->display_name : "Vacant", 18) ?>
+                <div class="span2" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
+                    <?php echo $poste->user->loaded() ? $poste->user->display_name : "Vacant" ?>
                 </div>
 
             </div>
