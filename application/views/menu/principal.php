@@ -15,7 +15,15 @@ $links = array(
 <div class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-inner">
         <div class="container">
-            <?php echo Bootstrap::navs($links, Request::current()->controller()) ?>
+
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <?php echo Bootstrap::navs($links, Request::current()->controller(), array('class' => 'nav-collapse')) ?>
         </div>
     </div>
 </div>
