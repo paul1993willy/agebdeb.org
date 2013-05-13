@@ -1,2 +1,8 @@
 #Ignore les fichiers de backup
 *~
+.htaccess
+/nbproject/private/
+/nbproject
+/application/cache/**
+/application/logs/**
+/asset/media/**

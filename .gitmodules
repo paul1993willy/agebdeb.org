@@ -1,0 +1,42 @@
+[submodule "modules/bootstrap"]
+	path = modules/bootstrap
+	url = https://github.com/Hete/kohana-bootstrap.git
+[submodule "modules/mail"]
+	path = modules/mail
+	url = https://github.com/Hete/kohana-mail.git
+[submodule "modules/paypal"]
+	path = modules/paypal
+	url = https://github.com/Hete/kohana-paypal.git
+[submodule "modules/search"]
+	path = modules/search
+	url = https://github.com/Hete/kohana-search.git
+[submodule "modules/notification"]
+	path = modules/notification
+	url = https://github.com/Hete/kohana-validform.git
+[submodule "modules/cms"]
+	path = modules/cms
+	url = https://github.com/noah-goodrich/kohana-cms.git
+[submodule "system"]
+	path = system
+	url = https://github.com/kohana/core.git
+[submodule "application/classes/host"]
+	path = application/classes/host
+	url = git@github.com:Hete/kohana-host.git
+[submodule "modules/error"]
+	path = modules/error
+	url = https://github.com/Hete/kohana-error.git
+[submodule "modules/minify"]
+	path = modules/minify
+	url = https://github.com/arteymix/kohana-minify.git
+[submodule "modules/urlang"]
+	path = modules/urlang
+	url = https://github.com/Hete/kohana-urlang
+[submodule "modules/orm-wordpress"]
+	path = modules/orm-wordpress
+	url = https://github.com/iizmoo/kohana-orm-wordpress.git
+[submodule "blog"]
+	path = blog
+	url = https://github.com/WordPress/WordPress.git
+[submodule "modules/oauth"]
+	path = modules/oauth
+	url = https://github.com/kohana/oauth.git

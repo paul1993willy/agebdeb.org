@@ -1,0 +1,126 @@
+
+/* Par defaut, s'applique a tous les articles */
+article {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+}
+
+/* Navigation */
+nav {
+    width: 20%;
+    min-height:450px;
+}
+
+p {
+    font-size: 13px;
+    margin: 10px 0px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+/*
+ * Elements de type inline
+ */
+
+th {
+    width: 0.142857143%;
+    text-align: center;
+}
+
+time {
+    color: darkgray;
+    margin-right: 10px;
+}
+
+/*
+ * Regles de selection
+ */
+
+div#wrap {
+    width: 960px;
+    margin: auto;
+    background-color: white;
+}
+
+section:first-child {
+    margin-top: 0px;
+}
+
+
+
+article:last-child {
+    border-bottom: 0px;
+}
+
+article p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.minimized article p:last-child {
+    margin-bottom: 0px;
+}
+
+nav > ul {
+    text-align: right;
+    margin-left: 10px;
+    border-right: 5px solid rgb(147, 152, 99);
+    background-color: gainsboro;
+}
+
+nav a {
+    display: block;
+    padding: 0.45em;
+}
+
+li.parent {
+    font-size: 16px;
+}
+
+li.parent ul {
+    /*height: 0px;*/
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+li.parent li {
+    font-size: 13px;
+}
+
+li.parent:hover ul {
+    height: auto;
+}
+
+.pull-left {
+    float: left;
+}
+
+.span2 {
+    width: 40%
+}
+.span4 {
+    width: 60%;
+}
+
+#content-container {
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    float: right;
+    padding: 20px;
+    padding-top: 0px;
+}
