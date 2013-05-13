@@ -9,16 +9,14 @@
         <?php echo View::factory("menu/comites") ?>
 
         <ul class="unstyled">
-            <?php foreach ($comite->postes->order_by("nom")->find_all() as $poste): ?>
-
+            <?php foreach ($comite->postes->order_by('nom')->cached()->find_all() as $poste): ?>
                 <li>
                     <h4><?php echo $poste->nom ?></h4>
 
-                    <h5><?php echo $poste->user->loaded() ? $poste->user->user_nicename : "Vacant" ?></h5>
+                    <h5><?php echo $poste->user->loaded() ? $poste->user->display_name : 'Vacant' ?></h5>
 
                     <p><?php echo $poste->description ?></p>
                 </li>
-
             <?php endforeach ?>
         </ul>
 

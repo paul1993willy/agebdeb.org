@@ -12,8 +12,8 @@ defined('SYSPATH') or die('No direct script access.');
 class Model_Comite extends ORM {
 
     protected $_has_many = array(
-        'users' => array('through' => 'users_comites'),
-        'links' => array('through' => 'links_comites'),
+        'users' => array('model' => 'wp_user', 'through' => 'users_comites', 'far_key' => 'ID'),
+        'links' => array('model' => 'wp_link', 'through' => 'links_comites', 'far_key' => 'link_id'),
         'postes' => array()
     );
 

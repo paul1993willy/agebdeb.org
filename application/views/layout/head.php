@@ -3,8 +3,9 @@
 <title><?php echo __($title) ?></title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="<?php echo __($description) ?>" />
-<meta name="keywords" content="<?php echo $keywords ?>" />
+<?php echo HTML::meta('description', __($description)) ?>
+<?php echo HTML::meta('keywords', $keywords) ?>
+<?php echo HTML::meta('viewport', 'width=device-width, initial-scale=1.0') ?>
 
 <?php echo HTML::favicon('asset/img/favicon.png') ?>
 

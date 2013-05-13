@@ -6,12 +6,14 @@
  */
 
 /**
- * Description of link
+ * Description of comite
  *
  * @author guillaume
  */
-class Model_Link extends Model_WP_Link {
-    //put your code here
+class Model_WP_Link_Comite extends Model_WP {
+    
+    protected $_table_name = 'links_comites';
+    
 }
 
 ?>

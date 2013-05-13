@@ -10,6 +10,14 @@ defined('SYSPATH') or die('No direct script access.');
  */
 class HTML extends Kohana_HTML {
 
+    public static function meta($name, $content, array $attributes = NULL) {
+
+        $attributes['name'] = $name;
+        $attributes['content'] = $content;
+
+        return '<meta' . HTML::attributes($attributes) . ' />';
+    }
+
     /**
      * Génère un favicon.
      * 

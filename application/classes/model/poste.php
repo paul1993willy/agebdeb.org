@@ -14,7 +14,7 @@ class Model_Poste extends ORM {
     
     protected $_belongs_to = array(
         'comite' => array(),
-        'user' => array()
+        'user' => array('model' => 'wp_user')
     );
 
     protected $_has_many = array(

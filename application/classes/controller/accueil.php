@@ -2,15 +2,21 @@
 
 defined('SYSPATH') or die('No direct script access.');
 
+/**
+ * 
+ * @package agebdeb.org
+ * @category Controllers
+ * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
+ */
 class Controller_Accueil extends Controller_Template_AgeBdeB {
-    
+
     protected $content = "accueil";
 
     public function before() {
 
         parent::before();
 
-        $this->content->posts = ORM::factory('post')
+        $this->content->posts = ORM::factory('wp_post')
                 ->where('post_type', '=', 'post')
                 ->where('post_status', 'NOT IN', DB::expr("('draft', 'auto-draft', 'trash')"))
                 ->limit(5)
@@ -42,13 +48,6 @@ class Controller_Accueil extends Controller_Template_AgeBdeB {
                 Notification::instance()->add(Notification::ERROR, "Erreur lors de l'envoi de votre message.");
                 Notification::instance()->errors($contact->validation());
             }
-        }
-    }
-
-    public function action_login() {
-
-        if ($this->request->method() === Request::POST) {
-            $provider = OAuth_Provider::factory("google");
         }
     }
 

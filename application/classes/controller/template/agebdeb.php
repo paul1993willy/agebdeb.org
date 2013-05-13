@@ -43,14 +43,14 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
      * 
      * @var array 
      */
-    protected $css = array('bootstrap.css', 'agebdeb.css');
+    protected $css = array('bootstrap.css', 'bootstrap-responsive.css', 'agebdeb.css');
 
     /**
      * Liste de fichiers Javascript à minifier.
      * 
      * @var type 
      */
-    protected $js = array();
+    protected $js = array('jquery.min.js', 'bootstrap.min.js', 'bootstrap-extra.js');
 
     /**
      *

@@ -26,13 +26,20 @@
     <div class="span4">
         <h3>L'AGEBdeB, c'est</h3>
 
-        <ul>
-            <li>Sophie Masson aux <?php echo HTML::mailto("interne@age.bdeb.qc.ca", "Affaires Internes") ?></li>
-            <li>Vincent Antaki à <?php echo HTML::mailto("coordo@age.bdeb.qc.ca", "Coordinnation Générale") ?></li>
-            <li>Rémi Daigle et Corinne Arsenault à la <?php echo HTML::mailto("permanence@age.bdeb.qc.ca", "permanence") ?></li>
-            <li>Émile Nadeau à la <?php echo HTML::mailto("finance@age.bdeb.qc.ca", "Trésorie") ?></li>
-            <li>Sébastien Bégin aux <?php echo HTML::mailto("communications@age.bdeb.qc.ca", "Communications") ?></li>
-        </ul>
+        <?php foreach (ORM::factory('comite', array('nom_url' => 'conseil-executif'))->postes->order_by('nom')->cached()->find_all() as $poste): ?>
+            <div class="row">
+
+                <div class="span2">
+                    <?php echo HTML::mailto($poste->courriel, Text::limit_chars($poste->nom, 16), array('title' => $poste->nom, 'class' => 'tooltip-toggle')) ?>
+                </div>   
+
+                <div class="span2">
+                    <?php echo Text::limit_chars($poste->user->loaded() ? $poste->user->display_name : "Vacant", 18) ?>
+                </div>
+
+            </div>
+
+        <?php endforeach; ?>     
 
         <h3>Contacter l'Association</h3>
 
