@@ -34,7 +34,9 @@ class Controller_Accueil extends Controller_Template_AgeBdeB {
 
             if ($contact->check()) {
                 // Envoi du courriel
-                Mail_Sender::factory()->send(array($contact, "info@agebdeb.org"), "Vous avez contacté l'AGEBdeB", "mail/contact", array("contact" => $contact));
+                Mail_Sender::factory()
+                        ->style(file_get_contents('asset/css/bootstrap-mail.min.css'))
+                        ->send(array($contact, "info@agebdeb.org"), "Vous avez contacté l'AGEBdeB", "mail/contact", array("contact" => $contact));
                 Notification::instance()->add(Notification::SUCCESS, "Votre message a été envoyé avec succès. Vous devriez reçevoir un courriel de confirmation à <strong>:courriel</strong>.", array(":courriel" => $contact->courriel));
             } else {
                 Notification::instance()->add(Notification::ERROR, "Erreur lors de l'envoi de votre message.");
