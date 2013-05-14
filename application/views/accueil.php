@@ -28,7 +28,7 @@
 
         <h3><?php echo $comite_principal->nom ?></h3>
 
-        <p><?php echo Text::limit_chars($comite_principal->description_long) ?> <?php echo HTML::anchor('comites/' . $comite_principal->nom_url, 'En savoir plus...') ?></p>
+        <p><?php echo $comite_principal->description_long ?> <?php echo HTML::anchor('comites/' . $comite_principal->nom_url, 'En savoir plus...') ?></p>
 
         <?php foreach ($comite_principal->postes->order_by('nom')->cached()->find_all() as $poste): ?>
 
@@ -58,7 +58,6 @@
         <?php echo HTML::mailto('age@age.bdeb.qc.ca') ?>
 
         <h5>En ligne</h5>
-        <?php $contact = Model::factory("contact") ?>
 
         <?php echo Form::open("accueil/contact") ?>
 
