@@ -30,6 +30,10 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
     }
 
     public function action_index() {
+
+        // Ajout de la feuille de style du comité
+        $this->css[] = "asset/css/comites/{$this->comite->nom_url}.css";
+
         $this->content->posts = $this->comite->posts()
                 ->where('post_type', '=', 'post')
                 ->where('post_status', 'NOT IN', DB::expr("('draft', 'auto-draft', 'trash')"))
@@ -41,8 +45,27 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
     }
 
     public function action_modifier() {
-        if (!$this->comite->has("users", Auth::instance()->get_user())) {
-            throw new HTTP_Exception_401("Vous n'avez pas le droit de modifier ce comité.");
+
+        if ($this->request->method() !== Request::POST) {
+            return;
+        }
+
+        $values = $this->request->post('comite');
+
+        $comite_expected = array();
+
+        try {
+
+            $this->comite
+                    ->values($this->request->post('comite'), $comite_expected)
+                    ->update();
+
+            // Update de la feuille de style
+            $this->comite->style($values['style']);
+
+            Notification::instance()->add(Notification::SUCCESS, 'Vous changements ont été effectué avec succès!');
+        } catch (ORM_Validation_Exception $ove) {
+            Notification::instance()->errors($ove);
         }
     }
 

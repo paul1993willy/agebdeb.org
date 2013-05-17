@@ -21,6 +21,30 @@ class Model_Comite extends ORM {
         return ORM::factory('wp_term', array('name' => $this->nom))->posts;
     }
 
+    /**
+     * Getter/setter for the stylesheet.
+     * 
+     * @param string $style
+     * @return string
+     */
+    public function style($style = NULL) {
+
+        if ($style === NULL) {
+
+            $path = "asset/css/comites/$this->nom_url.css";
+
+            if (file_exists($path)) {
+                return file_get_contents($path);
+            }
+
+            return '';
+        }
+
+        file_put_contents($path, (string) $style);
+
+        return $this;
+    }
+
 }
 
 ?>

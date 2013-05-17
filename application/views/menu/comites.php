@@ -1,5 +1,4 @@
 <?php
-
 defined('SYSPATH') or die('No direct script access.');
 
 $links = array("<li class='nav-header'>Comités</li>");
@@ -10,3 +9,4 @@ foreach (ORM::factory("comite")->order_by("nom")->find_all() as $comite) {
 ?>
 
 <?php echo Bootstrap::nav_list($links, Request::current()->param("comite"), array("class" => "well")) ?>
+

@@ -2,11 +2,11 @@
 
 <div class="row">
 
-    <div class="span3">
+    <div class="span3">      
 
         <p><?php echo HTML::image("asset/img/comites/$comite->nom_url.svg", array("class" => "row-fluid")) ?></p>
 
-        <?php echo View::factory("menu/comites") ?>
+        <?php echo View::factory("menu/comites", array('comite' => $comite)) ?>
 
         <ul class="unstyled">
             <?php foreach ($comite->postes->order_by('nom')->cached()->find_all() as $poste): ?>
@@ -21,7 +21,11 @@
         </ul>
 
     </div>
-    <div class="span9">   
+    <div class="span9">
+
+        <div class="control-group pull-right">
+            <?php echo Bootstrap::button(Bootstrap::icon('setting'), NULL, "comites/$comite->nom_url/modifier") ?>
+        </div>
 
         <h2 class="media-heading"><?php echo $comite->nom ?> <small><?php echo $comite->description ?></small></h2>
 
