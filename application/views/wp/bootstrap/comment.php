@@ -4,7 +4,7 @@
 
     <div class="media-body">
 
-        <h5 class="media-heading">Publié par <?php echo $comment->user->user_nicename ?> <?php echo Date::fuzzy_span(strtotime($comment->comment_date)) ?></h5>
+        <h5 class="media-heading">Publié par <?php echo $comment->user->display_name ?> <?php echo Date::fuzzy_span(strtotime($comment->comment_date)) ?></h5>
 
         <?php echo Text::auto_p($comment->comment_content) ?>
 

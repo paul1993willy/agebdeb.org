@@ -16,6 +16,7 @@ $links = array(
     <div class="navbar-inner">
         <div class="container">
 
+            <?php echo HTML::anchor('', 'AGEBdeB', array('class' => 'brand hidden-desktop')) ?>
 
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
@@ -23,7 +24,9 @@ $links = array(
                 <span class="icon-bar"></span>
             </a>
 
-            <?php echo Bootstrap::navs($links, Request::current()->controller(), array('class' => 'nav-collapse')) ?>
+            <div class="nav-collapse collapse">
+                <?php echo Bootstrap::navs($links, Request::current()->controller(), array('class' => 'nav-collapse')) ?>
+            </div>
         </div>
     </div>
 </div>
