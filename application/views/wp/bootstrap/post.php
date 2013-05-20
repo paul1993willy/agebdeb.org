@@ -2,7 +2,7 @@
 
     <h3><?php echo HTML::anchor(ORM::factory('wp_option', array('option_name' => 'siteurl'))->option_value . URL::query(array('p' => $post->ID)), $post->post_title) ?></h3>
 
-    <h4>Publié par <?php echo $post->user->user_nicename ?> le <?php echo date("j M Y", strtotime($post->post_date)) ?></h4>
+    <h4>Publié par <?php echo $post->user->display_name ?> le <?php echo date("j M Y", strtotime($post->post_date)) ?></h4>
 
     <?php echo Text::auto_p($post->post_content) ?>
 
