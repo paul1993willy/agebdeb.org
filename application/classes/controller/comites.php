@@ -11,6 +11,8 @@ defined('SYSPATH') or die('No direct script access.');
  */
 class Controller_Comites extends Controller_Template_AGEBdeB {
 
+    protected $title = 'Comités - AGEBdeB';
+    protected $description = "Comités de l'association étudiante du collège de Bois-de-Boulogne";
     protected $keywords = array('comites', 'engagement');
 
     /**

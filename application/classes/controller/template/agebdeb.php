@@ -23,7 +23,7 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
      * 
      * @var string 
      */
-    protected $description = "Le site de l'association générale étudiante de bois de boulogne";
+    protected $description = "Le site de l'association générale étudiante de Bois-de-Boulogne";
 
     /**
      * Mots-clés

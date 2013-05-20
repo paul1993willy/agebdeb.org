@@ -16,8 +16,6 @@ $links = array(
     <div class="navbar-inner">
         <div class="container">
 
-            <?php echo HTML::anchor('', 'AGEBdeB', array('class' => 'brand hidden-desktop')) ?>
-
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -25,8 +23,18 @@ $links = array(
             </a>
 
             <div class="nav-collapse collapse">
+
                 <?php echo Bootstrap::navs($links, Request::current()->controller(), array('class' => 'nav-collapse')) ?>
+
+                <?php echo Form::open('http://www.agebdeb.org/blog', array('class' => 'navbar-search pull-right', 'method' => 'get')) ?>
+
+                <?php echo Form::input('s', NULL, array('class' => 'search-query', 'placeholder' => 'Rechercher')) ?>
+
+                <?php echo Form::close() ?>
+
             </div>
+
+
         </div>
     </div>
 </div>
