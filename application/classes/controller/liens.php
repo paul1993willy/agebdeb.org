@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 defined('SYSPATH') or die('No direct script access.');
 
@@ -9,8 +9,13 @@ defined('SYSPATH') or die('No direct script access.');
  */
 class Controller_Liens extends Controller_Template_AGEBdeB {
 
-    public function action_index() {}
-    
+    protected $title = 'Liens utiles - AGEBdeB';
+    protected $keywords = array('liens');
+
+    public function action_index() {
+        
+    }
+
 }
 
 ?>

@@ -9,6 +9,8 @@ defined('SYSPATH') or die('No direct script access.');
  * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
  */
 class Controller_Accueil extends Controller_Template_AgeBdeB {
+    
+    protected $title = 'Accueil - AGEBdeB';
 
     protected $content = "accueil";
 
