@@ -17,6 +17,11 @@ class Model_Comite extends ORM {
         'postes' => array()
     );
 
+    /**
+     * Retourne les posts associé à ce comité.
+     * 
+     * @return Model_WP_Post
+     */
     public function posts() {
         return ORM::factory('wp_term', array('name' => $this->nom))->posts;
     }

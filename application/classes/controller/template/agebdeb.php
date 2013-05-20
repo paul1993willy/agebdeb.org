@@ -87,7 +87,7 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
         View::set_global('title', $this->title);
         View::set_global('description', $this->description);
         View::set_global('keywords', implode(", ", Arr::merge($this->global_keywords, $this->keywords)));
-
+        
         // Fichiers à minifier
         View::set_global('js', $this->js);
         View::set_global('css', $this->css);
