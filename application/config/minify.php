@@ -1,12 +1,12 @@
 <?php
 
 return array(
-    'path' => array(
-        'js' => 'asset/js/',
-        'css' => 'asset/css/',
-        'less' => 'asset/less/',
-        'coffee' => 'asset/coffee/',
-        'media' => 'asset/media/',
+    'media_path' => 'asset/media/',
+    'css' => array(
+        'path' => 'asset/css/',
+    ),
+    'js' => array(
+        'path' => 'asset/js/'
     ),
 );
 ?>
