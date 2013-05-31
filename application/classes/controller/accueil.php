@@ -12,7 +12,7 @@ class Controller_Accueil extends Controller_Template_AgeBdeB {
     
     protected $title = 'Accueil - AGEBdeB';
 
-    protected $content = "accueil";
+    protected $content = 'accueil';
 
     public function before() {
 
@@ -48,6 +48,7 @@ class Controller_Accueil extends Controller_Template_AgeBdeB {
                 Mail_Sender::factory()
                         ->style(file_get_contents('asset/css/bootstrap-mail.min.css'))
                         ->send(array($contact, "info@agebdeb.org"), "Vous avez contacté l'AGEBdeB", "mail/contact", array("contact" => $contact));
+                
                 Notification::instance()->add(Notification::SUCCESS, "Votre message a été envoyé avec succès. Vous devriez reçevoir un courriel de confirmation à <strong>:courriel</strong>.", array(":courriel" => $contact->courriel));
                 
                 // On vide le contact

@@ -21,6 +21,11 @@ return array(
     'agebdeb\.org' => array(
         'base_url' => '/',
         'salt' => Arr::get($_SERVER, 'COOKIE_SALT'),
+    ),
+    'phpunit' => array(
+        'salt' => 'ajsdiu8*(&*(0-()()*',
+        'environment' => Kohana::TESTING,
+        'caching' => FALSE
     )
 );
 ?>

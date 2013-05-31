@@ -2,9 +2,12 @@
 *~
 *.orig
 .htaccess
+
 /nbproject/private/
 /nbproject
+
 /application/cache/**
 /application/logs/**
 /application/mails/**
+
 /asset/media/**
