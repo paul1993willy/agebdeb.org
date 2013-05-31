@@ -21,11 +21,7 @@
         </ul>
 
     </div>
-    <div class="span9">
-
-        <div class="control-group pull-right">
-            <?php echo Bootstrap::button(Bootstrap::icon('pencil'), NULL, "comites/$comite->nom_url/modifier") ?>
-        </div>
+    <div class="span9">       
 
         <h2 class="media-heading"><?php echo $comite->nom ?> <small><?php echo $comite->description ?></small></h2>
 

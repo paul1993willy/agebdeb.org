@@ -4,7 +4,7 @@
 
     <h4>Publié par <?php echo $post->user->display_name ?> le <?php echo date("j M Y", strtotime($post->post_date)) ?></h4>
 
-    <?php echo Text::auto_p($post->post_content) ?>
+    <?php echo Text::auto_p(Text::auto_link($post->post_content)) ?>
 
     <p>Dernière modification <strong><?php echo Date::fuzzy_span(strtotime($post->post_modified)) ?></strong>.</p>
 

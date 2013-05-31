@@ -8,5 +8,5 @@ foreach (ORM::factory("comite")->order_by("nom")->find_all() as $comite) {
 }
 ?>
 
-<?php echo Bootstrap::nav_list($links, Request::current()->param("comite"), array("class" => "well")) ?>
+<?php echo Bootstrap::nav_list($links, Request::current()->param("comite"), NULL, array("class" => "well")) ?>
 

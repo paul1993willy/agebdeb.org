@@ -4,7 +4,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php echo HTML::meta('description', __($description)) ?>
-<?php echo HTML::meta('keywords', $keywords) ?>
+<?php echo HTML::meta('keywords', implode(', ', $keywords)) ?>
 <?php echo HTML::meta('viewport', 'width=device-width, initial-scale=1.0') ?>
 
 <?php echo HTML::favicon('asset/img/favicon.png') ?>

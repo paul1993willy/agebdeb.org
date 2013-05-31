@@ -32,7 +32,7 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
     }
 
     public function action_index() {
-        
+
         // Ajout de la feuille de style du comité
         $this->css[] = "asset/css/comites/{$this->comite->nom_url}.css";
 
@@ -46,12 +46,9 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
                 ->find_all();
     }
 
-    public function action_modifier() {        
+    public function action_modifier() {
         
-        // Google prettify
-        $this->css[] = 'prettify.css';
-        $this->js[] = 'prettify/run_prettify.js';
-        $this->js[] = 'prettify/lang-css.js';
+        throw new HTTP_Exception_401();
 
         if ($this->request->method() !== Request::POST) {
             return;
@@ -65,7 +62,7 @@ class Controller_Comites extends Controller_Template_AGEBdeB {
 
             $this->comite
                     ->values($this->request->post('comite'), $comite_expected)
-                    ->update();
+                    ->update();       
 
             // Update de la feuille de style
             $this->comite->style($values['style']);

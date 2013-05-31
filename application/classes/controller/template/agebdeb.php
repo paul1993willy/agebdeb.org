@@ -50,7 +50,7 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
      * 
      * @var type 
      */
-    protected $js = array('jquery.min.js', 'bootstrap.min.js', 'bootstrap-extra.js');
+    protected $js = array('jquery.min.js', 'bootstrap.js', 'bootstrap-extra.js');
 
     /**
      *
@@ -86,8 +86,8 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
         // Metas dans les globaux
         View::set_global('title', $this->title);
         View::set_global('description', $this->description);
-        View::set_global('keywords', implode(", ", Arr::merge($this->global_keywords, $this->keywords)));
-        
+        View::set_global('keywords', Arr::merge($this->global_keywords, $this->keywords));
+
         // Fichiers à minifier
         View::set_global('js', $this->js);
         View::set_global('css', $this->css);

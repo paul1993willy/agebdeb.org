@@ -24,7 +24,7 @@ $links = array(
 
             <div class="nav-collapse collapse">
 
-                <?php echo Bootstrap::navs($links, Request::current()->controller(), array('class' => 'nav-collapse')) ?>
+                <?php echo Bootstrap::nav($links, Request::current()->controller(), NULL, array('class' => 'nav-collapse')) ?>
 
                 <?php echo Form::open('http://www.agebdeb.org/blog', array('class' => 'navbar-search pull-right', 'method' => 'get')) ?>
 
