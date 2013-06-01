@@ -1,4 +1,4 @@
-<?php echo View::factory("menu/principal") ?>
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
 
 <header class="header hero-unit">
 

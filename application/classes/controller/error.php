@@ -9,9 +9,9 @@ defined('SYSPATH') or die('No direct script access.');
  * @author Guillaume Poirier-Morency <guillaumepoiriermorency@gmail.com>
  */
 class Controller_Error extends Kohana_Controller_Error {
-
-    public $template = 'template/agebdeb';
-
+    
+    protected $content = 'error';
+    
 }
 
 ?>

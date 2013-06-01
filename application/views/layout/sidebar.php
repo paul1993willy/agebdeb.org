@@ -1,3 +1,5 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
 <nav class="pull-left">
     <ul>
         <?php for ($i = 0; $i < 3; $i++) : ?>

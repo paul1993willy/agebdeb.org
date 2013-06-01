@@ -59,6 +59,12 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
     public $template = 'template/agebdeb';
 
     /**
+     *
+     * @var View 
+     */
+    protected $menu = 'layout/empty';
+
+    /**
      * Contenu principal
      * @var View
      */
@@ -68,14 +74,20 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
 
         parent::before();
 
-        // Génère un controlleur et une action par défaut
-        $default_action = $this->request->action() === 'index' ? '' : '/' . $this->request->action();
-        $default_view = $this->request->controller() . $default_action;
-        $this->content = $this->content ? $this->content : $default_view;
+        $this->menu = View::factory($this->menu);
 
-        // Si la vue n'existe pas, on lance une 404
-        if (!Kohana::find_file('views', $this->content)) {
-            throw new HTTP_Exception_404();
+        if ($this->content === NULL) {
+
+            // Génère un controlleur et une action par défaut
+            $default_action = $this->request->action() === 'index' ? '' : '/' . $this->request->action();
+            $default_view = $this->request->controller() . $default_action;
+
+            $this->content = $default_view;
+
+            // Si la vue existe, on l'utilise
+            if (!Kohana::find_file('views', $this->content)) {
+                throw new HTTP_Exception_401();
+            }
         }
 
         $this->content = View::factory($this->content);
@@ -91,6 +103,8 @@ abstract class Controller_Template_AGEBdeB extends Controller_Template {
         // Fichiers à minifier
         View::set_global('js', $this->js);
         View::set_global('css', $this->css);
+
+        $this->template->menu = $this->menu;
 
         // On set le contenu
         $this->template->content = $this->content;

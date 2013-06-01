@@ -1,3 +1,5 @@
+<?php defined('SYSPATH') or die('No direct script access.'); ?>
+
 <div class="comment media">
     
     <?php echo Gravatar::image($comment->user->user_email, array("class" => "pull-left img-polaroid", "width" => 92)) ?>

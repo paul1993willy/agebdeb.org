@@ -16,7 +16,6 @@ return array(
     'localhost' => array(
         'environment' => Kohana::PRODUCTION,
         'salt' => 'asdq32u483248932riewhfsd78yf',
-    //'database' => 'localhost'
     ),
     'agebdeb\.org' => array(
         'base_url' => '/',
