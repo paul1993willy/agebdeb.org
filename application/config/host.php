@@ -15,11 +15,11 @@ return array(
     ),
     'localhost' => array(
         'environment' => Kohana::PRODUCTION,
-        'salt' => 'asdq32u483248932riewhfsd78yf',
+        'cookie_salt' => 'asdq32u483248932riewhfsd78yf',
     ),
     'agebdeb\.org' => array(
         'base_url' => '/',
-        'salt' => Arr::get($_SERVER, 'COOKIE_SALT'),
+        'cookie_salt' => Arr::get($_SERVER, 'COOKIE_SALT'),
     ),
     'phpunit' => array(
         'salt' => 'ajsdiu8*(&*(0-()()*',

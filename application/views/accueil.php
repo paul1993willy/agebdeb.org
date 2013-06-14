@@ -3,7 +3,7 @@
 <div class="row">
     <div class="span8">
 
-        <h1>À propos</h1>
+        <h1 id="a-propos">À propos</h1>
 
         <p>L’Association générale des étudiants de Bois-de-Boulogne (AGEBdeB) est une association étudiante défendant les droits et les intérêts des étudiantes et étudiants du collège de Bois-de-Boulogne, à Montréal. Établie depuis les années 1970, elle mène des campagnes de sensibilisation et d’information auprès de la population étudiante, organise des activités étudiantes, chapeaute des comités aux vocations artistiques, politiques, sociocommunautaires, médiatiques, de divertissement et de loisirs, défend les droits de la population étudiante auprès des instances de la direction et des différents paliers de gouvernement, et s’arrime aux mouvements sociaux étudiants à travers le Québec.</p>
 
@@ -45,16 +45,16 @@
             </div>
 
         <?php endforeach; ?>     
+        
+        <h3 id="contact">Contacter l'Association</h3>
 
-        <h3>Contacter l'Association</h3>
-
-        <h5>En personne</h5>
+        <h5 id="contact-en-personne">En personne</h5>
         <p>Au local S-159, pavillion Ignace-Bourget</p>
 
-        <h5>Par téléphone</h5>
+        <h5 id="contact-par-telephone">Par téléphone</h5>
         <p>(514) 332-3000 poste 7580</p>
 
-        <h5>Par courriel</h5>
+        <h5 id="contact-par-courriel">Par courriel</h5>
         <?php echo HTML::mailto('age@age.bdeb.qc.ca') ?>
 
         <h5>En ligne</h5>
@@ -79,7 +79,7 @@
 
         <?php echo Form::close() ?>
 
-        <h3>Authentification</h3>
+        <h3 id="authentification">Authentification</h3>
 
         <?php echo Form::open("blog/wp-login.php") ?>
 
